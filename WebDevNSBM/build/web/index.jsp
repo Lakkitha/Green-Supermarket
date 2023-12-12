@@ -1,17 +1,20 @@
 <%-- 
-    Document   : index
-    Created on : Dec 5, 2023, 9:08:18 PM
-    Author     : OMEN
+    Document   : Index
+    Created on : Dec 12, 2023, 7:39:20PM
+    Author     : Gagana
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en-US">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Gagana Methmal">
+        <meta name="description" content="Fruits | Green Supermarket">
+        <title> Index </title>
+    </head>    
     <body>
-        <h1>Hello World!</h1>
+        <main>
+            <jsp:include page="Fruits.jsp"/>
+        </main>
     </body>
 </html>
