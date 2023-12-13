@@ -30,7 +30,7 @@ public class Registration extends HttpServlet
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
             // The MySQL queries i used to create this will be available in WEB-INF folder.
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=false", "root", "password");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
             PreparedStatement pst = con.prepareStatement("INSERT INTO users (uname, upwd, uemail, umobile) VALUES(?, ?, ?, ?)");
 
             pst.setString(1, uname);
