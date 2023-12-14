@@ -30,9 +30,10 @@
             <a href="" class="forgot_password">Forgot Password?</a>
             
             <p>or</p>
-            <button class="register_button" onclick="">Register</button>
+            <button class="register_button" onclick="location.href='Registration.jsp'">Register</button>
             
         </div>
+        <script src="LoginScript.js"></script>
             
             
                 
