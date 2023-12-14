@@ -9,11 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="LoginStyles.css">
         <title>Login Page</title>
     </head>
     <body>
         <div class="login-container">
             <h2>Login</h2>
+            <img src="images/logogreenbig.jpg" alt="logo" class="logo">
             <form id="LoginForm">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -23,6 +25,8 @@
                 
                 <button type="button" onclick=" validateLogin()">Login</button>
             </form>
+            
+        </div>
             
             
                 
