@@ -16,7 +16,7 @@ body
     margin: 0;
 }
 
-.login-container 
+.login_container 
 
 {
     width: 300px;
@@ -58,6 +58,7 @@ input
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    text-align: center;
 }
 
 button
@@ -82,5 +83,48 @@ h2
 {       
     text-align: center;
 }
+
+.forgot_password
+
+{
+    display:block;
+    margin-top:15px;
+    color:#555;
+    text-align: center;
+}
+
+.forgot_password:hover
+
+{
+    color:#3243;
+}
+
+p
+
+{
+    text-align: center;    
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.register_button
+
+{
+    padding: 10px;
+    background-color:#FFA500;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+label
+{
+    text-align: center;
+}
+
+
 
 

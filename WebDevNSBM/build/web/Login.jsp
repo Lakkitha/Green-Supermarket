@@ -13,18 +13,24 @@
         <title>Login Page</title>
     </head>
     <body>
-        <div class="login-container">
+        <div class="login_container">
             <h2>Login</h2>
             <img src="images/logogreenbig.jpg" alt="logo" class="logo">
             <form id="LoginForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
                 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email" id="email" name="email" required>
                 
-                <button type="button" onclick=" validateLogin()">Login</button>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter your password" id="password" name="password" required>
+                
+                <button class="login_button" onclick=" validateLogin()">Login</button>
             </form>
+            
+            <a href="" class="forgot_password">Forgot Password?</a>
+            
+            <p>or</p>
+            <button class="register_button" onclick="">Register</button>
             
         </div>
             
