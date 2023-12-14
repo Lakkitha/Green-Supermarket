@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Dec 5, 2023, 9:08:18 PM
+    Created on : Dec 5, 2023, 9:08:18â¯PM
     Author     : OMEN
 --%>
 
@@ -12,6 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <main>
+            <jsp:include page="Login.jsp"/>
+        </main>
+        <h1></h1>
+        
     </body>
 </html>
