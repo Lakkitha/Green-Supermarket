@@ -1,21 +1,23 @@
 <%-- 
     Document   : index
-    Created on : Dec 5, 2023, 9:08:18â¯PM
-    Author     : OMEN
+    Created on : Dec 5, 2023, 9:08:18PM
+    Author     : Gagana
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Gagana" />
+        <meta name="description" content="Index | Green Supermarket" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Index</title>
     </head>
+
     <body>
         <main>
-            <jsp:include page="Login.jsp"/>
+            <jsp:include page="Register.jsp" />
         </main>
-        <h1></h1>
-        
     </body>
 </html>
