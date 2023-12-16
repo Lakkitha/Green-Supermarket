@@ -4,25 +4,35 @@
   <meta charset="UTF-8">
   <meta name="author" content="Gagana Methmal">
   <meta name="description" content="Login">
+  <link rel="stylesheet" href="CSS/Reg.css">
   <title> Login </title>
 </head>
 <body>
-<header>
-  <h1> This is a login form! </h1>
-</header>
+
 <main>
+    <h1> Login </h1>
+    <p>Got an account? Login and buy today!</p>
   <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 
   <form action="Login" method="POST">
-    <label for="email"> <h3> Email </h3> </label>
-    <input type="email" name="useremail" id="email" placeholder="yourmom@gmail.com" autocomplete="on">
-
-    <label for="password"> <h3> Password </h3> </label>
-    <input type="password" name="password" id="password" placeholder="pass" autocomplete="on"> <br> <br> <br>
+      
+    <input type="email" name="useremail" id="email" placeholder="Enter your Email" autocomplete="on">
+    <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="on"> <br> <br> <br>
+    
+    <div class="remember-forgot-wrapper">
+        <div class="remember-me-wrapper">
+            <label>
+                <input type="checkbox" name="rememberMe" id="rememberMe"> <span>Remember Me</span>
+            </label>
+        </div>
+        <div class="forgot-password-link">
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
 
     <button type="submit" formaction="Login" formmethod="POST"> Login </button> <br> <br>
 
-    <a href="registration.jsp"> Create a account! </a>
+    <p class="login-message">If you don't have an account, register <a href="registration.jsp">here</a>.</p>
   </form>
 
   <script type="text/javascript">

@@ -2,15 +2,15 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>Login_Signup.Login</servlet-class>
+        <servlet-class>Registration.Login</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Logout</servlet-name>
-        <servlet-class>Login_Signup.Logout</servlet-class>
+        <servlet-class>Registration.Logout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Registration</servlet-name>
-        <servlet-class>Login_Signup.Registration</servlet-class>
+        <servlet-class>Registration.Registration</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>

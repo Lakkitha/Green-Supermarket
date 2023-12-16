@@ -8,7 +8,11 @@
 </head>
 <body>
 <main>
-    <h4> Assuming that after successful login page user gets redirected to home. This is the home page, redirected after successful login </h4>
+    <h4> Home Page </h4>
+    
+    <form action="Logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
 </main>
 </body>
 </html>

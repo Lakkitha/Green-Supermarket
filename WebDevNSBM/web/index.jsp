@@ -1,8 +1,37 @@
+<%@ page import="java.util.UUID" %>
+<%@ page import="javax.servlet.http.Cookie" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="Registration.RememberMeUtil" %>
+
 <%
-  if (session.getAttribute("name")==null)
-  {
-    response.sendRedirect("login.jsp");
-  }
+    String rememberMeToken = null;
+
+    // Check if "remember_me_token" cookie exists
+    Cookie[] cookies = request.getCookies();
+    
+    if (cookies != null) 
+    {
+        for (Cookie cookie : cookies) 
+        {
+            if (cookie.getName().equals("remember_me_token")) 
+            {
+                rememberMeToken = cookie.getValue();
+                break;
+            }
+        }
+    }
+
+    // If rememberMeToken is not null, validate and log in the user
+    if (rememberMeToken != null && RememberMeUtil.ValidateRememberMeToken(rememberMeToken)) 
+    {
+        RememberMeUtil.LoginWithRememberMeToken(rememberMeToken, request);
+        response.sendRedirect("home.jsp");
+    } 
+    else
+    {
+        // Redirect to login page if the token is not valid or not present
+        response.sendRedirect("login.jsp");
+    }
 %>
 
 <!DOCTYPE HTML>
@@ -15,7 +44,7 @@
 </head>
 <body>
 <main>
-    <jsp:include page="home.jsp"/>
+    
 </main>
 </body>
 </html>
