@@ -1,3 +1,77 @@
+function updateBorderColor(elementId) {
+    let inputElement = document.getElementById(elementId);
+
+    // Resets border color to default
+    inputElement.style.borderColor = "";
+
+    // Checks the validation and update border color accordingly if empty.
+    switch (elementId) {
+        case "firstName":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+
+        case "lastName":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+
+        case "address":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+
+        case "email":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+
+        case "postalCode":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+
+        case "mobileNumber":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+
+        case "password":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+
+        case "confirmPassword":
+            if (inputElement.value.trim() === "") {
+                inputElement.style.borderColor = "red";
+            } else {
+                inputElement.style.borderColor = "green";
+            }
+            break;
+    }
+}
+
 function validateForm() {
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
@@ -10,41 +84,62 @@ function validateForm() {
     let nameRegex = /^[A-Za-z]{1,30}$/;
     let postalCodeRegex = /^\d{5}$/;
     let mobileNumberRegex = /^\d{10}$/;
-    let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    let passwordRegex = /^.{8,}$/;
 
-    // 15 Letters each of first name and last name.
+    let errorMessage = document.getElementById("error-message");
+
+    // Clear any previous error messages and reset input styles
+    errorMessage.innerHTML = "";
+    resetInputStyles();
+
     if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
-        alert("First name and last name should only contain 15 letters each.");
+        errorMessage.innerHTML = "Enter your name, cannot exceed 15 characters";
+        setInvalidStyle(document.getElementById("firstName"));
+        setInvalidStyle(document.getElementById("lastName"));
         return;
     }
 
-    // Checks for a five-digit postal code.
     if (!postalCodeRegex.test(postalCode)) {
-        alert("Postal code incorrect");
+        errorMessage.innerHTML = "Invalid postal code";
+        setInvalidStyle(document.getElementById("postalCode"));
         return;
     }
 
-    // Checks for a 10-digit mobile number.
     if (!mobileNumberRegex.test(mobileNumber)) {
-        alert("Enter a valid mobile number.");
+        errorMessage.innerHTML = "Invalid mobile number.";
+        setInvalidStyle(document.getElementById("mobileNumber"));
         return;
     }
 
-    // Checks if passwords match and meet the my criteria.
     if (password !== confirmPassword || !passwordRegex.test(password)) {
-        alert(
-                "Passwords should match or contain at least 8 characters, combination of letters and numbers."
-                );
+        errorMessage.innerHTML = "Password should be at least 8 characters long.";
+        setInvalidStyle(document.getElementById("password"));
+        setInvalidStyle(document.getElementById("confirmPassword"));
         return;
     }
 
-    // Checks the terms and conditions.
     if (!termsCheck) {
-        alert("Please accept our terms and conditions.");
+        errorMessage.innerHTML = "Please accept our terms and conditions.";
         return;
     }
-
     // If all validations pass, you can register successfully.
-    // Have made validations a bit strict cause payments involved.
-    alert("Registration successful!");
+    errorMessage.innerHTML = "Registration successful!";
+}
+
+function resetInputStyles() {
+    // Reset styles for all input fields
+    let inputFields = document.querySelectorAll("input");
+    inputFields.forEach((input) => {
+        input.classList.remove("is-invalid");
+        input.classList.remove("is-valid");
+    });
+}
+
+function setInvalidStyle(inputField) {
+    inputField.classList.add("is-invalid");
+}
+
+function setValidStyle(inputField) {
+    inputField.classList.remove("is-invalid");
+    inputField.classList.add("is-valid");
 }

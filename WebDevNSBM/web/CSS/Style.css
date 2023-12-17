@@ -49,6 +49,15 @@ img {
     text-align: left;
 }
 
+/* Changes the button color to red, invalid output */
+.is-invalid {
+    border: 2px solid red;
+}
+
+.is-valid {
+    border: 2px solid green;
+}
+
 /* Responsive adjustments not working :(
 
 @media (max-width: 767px) 
