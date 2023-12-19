@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Dec 5, 2023, 9:08:18 PM
+    Created on : Dec 20, 2023, 4:12:33 AM
     Author     : OMEN
 --%>
 
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <% response.sendRedirect("Home/home.jsp");%>
     </body>
 </html>
