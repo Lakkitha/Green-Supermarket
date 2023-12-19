@@ -36,39 +36,62 @@ public class Login extends HttpServlet
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
             // Query wrote to retrieve data from database of registered users.
             PreparedStatement pst = con.prepareStatement("SELECT * FROM users WHERE uemail = ? AND upwd = ?");
+            
             pst.setString(1, uemail);
             pst.setString(2, upwd);
 
             ResultSet rs = pst.executeQuery();
+            
             if(rs.next())
             {
+                boolean verified = rs.getBoolean("uverified");
                 String userID = rs.getString("id");
                 String username = rs.getString("ufname");
                 
-                session.setAttribute("uid", userID);
-                session.setAttribute("uname", username);
-                
-                // Check if "Remember ME" is selected
-                if (rememberMe != null && rememberMe.equals("on"))
+                if (!verified)
                 {
-                    // Generate a unique token and store it in the database and a cookie
-                    String rememberMeToken = GenerateUniqueToken();
-                    StoreTokenInDatabase(userID, rememberMeToken);
-                    SetRememberMeCookie(response, rememberMeToken);
+                    // Generate verification token
+                    String verificationToken = Verification.GenerateVerificationToken(uemail);
+
+                    // Store encoded token in database
+                    Verification.StoreVerificationToken(Integer.parseInt(userID), verificationToken);
+
+                    // Construct verification link
+                    String verificationLink = "http://localhost:8080/WebDevNSBM/verification.jsp?token=" + verificationToken + "&email=" + uemail;
+
+                    // Send verification email with the link
+                    Verification.SendVerificationEmail(uemail, verificationLink);
+                    
+                    dispatcher = request.getRequestDispatcher("verification.jsp");
                 }
-                else 
+                else
                 {
-                    // If "Remember Me" is not selected, set session timeout to 10 days
-                    session.setMaxInactiveInterval(10 * 24 * 60 * 60); // seconds
+                    session.setAttribute("uid", userID);
+                    session.setAttribute("uname", username);
+
+                    // Check if "Remember ME" is selected
+                    if (rememberMe != null && rememberMe.equals("on"))
+                    {
+                        // Generate a unique token and store it in the database and a cookie
+                        String rememberMeToken = GenerateUniqueToken();
+                        StoreTokenInDatabase(userID, rememberMeToken);
+                        SetRememberMeCookie(response, rememberMeToken);
+                    }
+                    else 
+                    {
+                        // If "Remember Me" is not selected, set session timeout to 10 days
+                        session.setMaxInactiveInterval(10 * 24 * 60 * 60); // seconds
+                    }
+
+                    dispatcher = request.getRequestDispatcher("home.jsp");
                 }
-                
-                dispatcher = request.getRequestDispatcher("home.jsp");
             }
             else
             {
                 request.setAttribute("status", "failed");
                 dispatcher = request.getRequestDispatcher("login.jsp");
             }
+            
             dispatcher.forward(request, response);
         }
         catch (Exception e)
@@ -78,14 +101,14 @@ public class Login extends HttpServlet
     }
     
     // Method to generate a unique token
-    private String GenerateUniqueToken()
+    public static String GenerateUniqueToken()
     {
         // TODO: Implement a secure way to generate a unique token
         return UUID.randomUUID().toString();
     }
     
     // Method to store the token in the database
-    private void StoreTokenInDatabase(String userID, String token) {
+    public static void StoreTokenInDatabase(String userID, String token) {
         try 
         {
             Class.forName("com.mysql.jdbc.Driver");
@@ -104,7 +127,7 @@ public class Login extends HttpServlet
     }
     
     // Method to set the "Remember Me" cookie
-    private void SetRememberMeCookie(HttpServletResponse response, String token) {
+    public static void SetRememberMeCookie(HttpServletResponse response, String token) {
         Cookie cookie = new Cookie("remember_me_token", token);
         cookie.setMaxAge(30 * 24 * 60 * 60); // Set the cookie expiration time (e.g., 30 days)
         cookie.setPath("/"); // Set the cookie path to make it accessible to the entire application

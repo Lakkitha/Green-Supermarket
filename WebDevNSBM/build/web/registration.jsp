@@ -57,11 +57,20 @@
     <p class="login-message">If you already have an account, login <a href="login.jsp">here</a>.</p>
 </main>
 
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+<input type="hidden" id="error" value="<%= request.getAttribute("error") %>">
+
 <script type="text/javascript">
     let status = document.getElementById("status").value;
+    let error = document.getElementById("error").value;
+    
     if (status === "success") {
         alert("Account created successfully", "success");
-        window.location.href = "login.jsp";
+        window.location.href = "verification.jsp";
+    } else if (status === "failed") {
+        alert("Registration failed. " + error);
+        // Remove the line below to prevent the automatic redirection
+        // window.location.href = "registration.jsp";
     }
 </script>
 

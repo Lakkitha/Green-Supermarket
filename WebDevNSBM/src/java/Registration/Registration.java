@@ -12,6 +12,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+
 
 @WebServlet(name = "Registration", value = "/Registration")
 public class Registration extends HttpServlet
@@ -35,6 +38,26 @@ public class Registration extends HttpServlet
             Class.forName("com.mysql.cj.jdbc.Driver");
             // The MySQL queries i used to create this will be available in WEB-INF folder.
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            
+            // Check if the email is already taken and if the email isn't verified
+            System.out.println("Is email taken?: " + IsEmailTaken(uemail, con));
+            System.out.println("Is email verified?: " + Verification.CheckVerificationStatus(uemail));
+            
+            if (IsEmailTaken(uemail, con) && Verification.CheckVerificationStatus(uemail)) 
+            {
+                request.setAttribute("status", "failed");
+                request.setAttribute("error", "Email is already taken");
+                
+                dispatcher = request.getRequestDispatcher("registration.jsp");
+                dispatcher.forward(request, response);
+                
+                return; // Stop further execution
+            }
+            else if (IsEmailTaken(uemail, con) && !Verification.CheckVerificationStatus(uemail))
+            {
+                DeleteUserById(Integer.parseInt(GetUserIdByEmail(uemail)));
+            }
+            
             PreparedStatement pst = con.prepareStatement("INSERT INTO users (ufname, ulname, uaddress, upostal, upwd, uemail, umobile) VALUES(?, ?, ?, ?, ?, ?, ?)");
             
             PreparedStatement tokenPst = con.prepareStatement("INSERT INTO usertokens (user_id) VALUES(?);");
@@ -57,6 +80,18 @@ public class Registration extends HttpServlet
                 String userId = GetUserIdByEmail(uemail);
                 tokenPst.setString(1, userId);
                 tokenPst.executeUpdate();
+                
+                // Generate verification token
+                String verificationToken = Verification.GenerateVerificationToken(uemail);
+                
+                // Store encoded token in database
+                Verification.StoreVerificationToken(Integer.parseInt(userId), verificationToken);
+                
+                // Construct verification link
+                String verificationLink = "http://localhost:8080/WebDevNSBM/verification.jsp?token=" + verificationToken + "&email=" + uemail;
+
+                // Send verification email with the link
+                Verification.SendVerificationEmail(uemail, verificationLink);
                 
                 request.setAttribute("status", "success");
             }
@@ -88,8 +123,10 @@ public class Registration extends HttpServlet
     }
     
     // Method to get the user ID by email
-    private String GetUserIdByEmail(String email) {
+    public static String GetUserIdByEmail(String email) 
+    {
         String userID = "";
+        
         try {
             // Establish a database connection and execute a query to get the user ID
             // Use a PreparedStatement to avoid SQL injection
@@ -103,12 +140,69 @@ public class Registration extends HttpServlet
             if (rs.next()) {
                 userID = rs.getString("id");
             }
-        } catch (SQLException e) {
+        } 
+        catch (SQLException e) 
+        {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } 
+        catch (ClassNotFoundException e) 
+        {
             e.printStackTrace();
         }
 
         return userID;
+    }
+    
+    public static boolean IsEmailTaken(String email, Connection con) throws SQLException 
+    {
+        PreparedStatement pst = con.prepareStatement("SELECT COUNT(*) AS count FROM users WHERE uemail = ?");
+        pst.setString(1, email);
+        ResultSet rs = pst.executeQuery();
+        rs.next();
+        int count = rs.getInt("count");
+        
+        return count > 0;
+    }
+    
+    public static void DeleteUserById(int userID)
+    {
+        try 
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            
+            String tokenSql = "DELETE FROM usertokens WHERE user_id = ?";
+            String userSql = "DELETE FROM users WHERE id = ?";
+            
+            try (PreparedStatement tokenPst = con.prepareStatement(tokenSql))
+            {
+                tokenPst.setInt(1, userID);
+                tokenPst.executeUpdate();
+            }
+            catch (SQLException e)
+            {
+                e.printStackTrace();
+            }
+            finally
+            {
+                try (PreparedStatement userPst = con.prepareStatement(userSql))
+                {
+                    userPst.setInt(1, userID);
+                    userPst.executeUpdate();
+                }
+                catch (SQLException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        } 
+        catch (SQLException e) 
+        {
+            e.printStackTrace();
+        } 
+        catch (ClassNotFoundException e) 
+        {
+            e.printStackTrace();
+        }
     }
 }
