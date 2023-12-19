@@ -1,17 +1,18 @@
 <%-- 
     Document   : index
-    Created on : Dec 5, 2023, 9:08:18 PM
+    Created on : Dec 5, 2023, 9:08:18?PM
     Author     : OMEN
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en-US">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Gagana">
+        <meta name="description" content="Index | Green Supermarket">
+        <title> Index </title>
+    </head>    
     <body>
-        <h1>Hello World!</h1>
+        <jsp:include page="Footer.jsp"/>
     </body>
 </html>
