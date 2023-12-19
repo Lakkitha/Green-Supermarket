@@ -1,0 +1,30 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    border: 2px solid green;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.gray-text {
+    color: #888;
+}
+
+.small-input {
+    width: 50px;
+}
