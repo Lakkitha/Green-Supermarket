@@ -33,7 +33,7 @@ public class Login extends HttpServlet
             // This is the driver. just fo to WEB-INF folder and copy the JDBC JAR file to your XAAMP -> Tomcat -> Lib and paste.
             Class.forName("com.mysql.jdbc.Driver");
             // You only need to replace this code line with your localhost database credentials or you can host it.
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             // Query wrote to retrieve data from database of registered users.
             PreparedStatement pst = con.prepareStatement("SELECT * FROM users WHERE uemail = ? AND upwd = ?");
             
@@ -112,7 +112,7 @@ public class Login extends HttpServlet
         try 
         {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("UPDATE usertokens SET user_token = ? WHERE user_id = ?");
             
             pst.setString(1, token);

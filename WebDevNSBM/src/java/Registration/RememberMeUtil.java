@@ -20,7 +20,7 @@ public class RememberMeUtil
         try 
         {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("SELECT user_id FROM usertokens WHERE user_token = ?");
             pst.setString(1, token);
 
@@ -39,7 +39,7 @@ public class RememberMeUtil
         try 
         {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("SELECT user_id FROM usertokens WHERE user_token = ?");
             pst.setString(1, token);
 

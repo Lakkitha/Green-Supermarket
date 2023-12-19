@@ -46,7 +46,7 @@ public class VerificationLogin extends HttpServlet {
             // This is the driver. just fo to WEB-INF folder and copy the JDBC JAR file to your XAAMP -> Tomcat -> Lib and paste.
             Class.forName("com.mysql.jdbc.Driver");
             // You only need to replace this code line with your localhost database credentials or you can host it.
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             // Query wrote to retrieve data from database of registered users.
             PreparedStatement pst = con.prepareStatement("SELECT * FROM users WHERE id = ?");
             pst.setString(1, id);

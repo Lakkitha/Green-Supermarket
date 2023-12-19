@@ -37,7 +37,7 @@ public class Registration extends HttpServlet
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
             // The MySQL queries i used to create this will be available in WEB-INF folder.
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             
             // Check if the email is already taken and if the email isn't verified
             System.out.println("Is email taken?: " + IsEmailTaken(uemail, con));
@@ -132,7 +132,7 @@ public class Registration extends HttpServlet
             // Use a PreparedStatement to avoid SQL injection
             // Assuming users table has columns 'id' and 'uemail'
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("SELECT id FROM users WHERE uemail = ?");
             pst.setString(1, email);
             ResultSet rs = pst.executeQuery();
@@ -169,7 +169,7 @@ public class Registration extends HttpServlet
         try 
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             
             String tokenSql = "DELETE FROM usertokens WHERE user_id = ?";
             String userSql = "DELETE FROM users WHERE id = ?";

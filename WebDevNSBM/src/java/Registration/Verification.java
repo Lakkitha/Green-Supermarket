@@ -109,7 +109,7 @@ public class Verification
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("SELECT verification_token FROM usertokens WHERE user_id = ?");
             
             pst.setInt(1, userID);
@@ -132,7 +132,7 @@ public class Verification
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("UPDATE usertokens SET verification_token = ? WHERE user_id = ?");
             
             pst.setString(1, verificationToken);
@@ -150,7 +150,7 @@ public class Verification
         try 
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("UPDATE users SET uverified = TRUE WHERE uemail = ?");
 
             pst.setString(1, userEmail);
@@ -170,7 +170,7 @@ public class Verification
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
+            Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("SELECT uverified FROM users WHERE uemail = ?");
             pst.setString(1, email);
             ResultSet rs = pst.executeQuery();

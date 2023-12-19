@@ -24,13 +24,13 @@
     // If rememberMeToken is not null, validate and log in the user
     if (rememberMeToken != null && RememberMeUtil.ValidateRememberMeToken(rememberMeToken)) 
     {
-        RememberMeUtil.LoginWithRememberMeToken(rememberMeToken, request);
-        response.sendRedirect("home.jsp");
+        session.setAttribute("remember_token", rememberMeToken);
+        response.sendRedirect("TokenLogIn");
     } 
     else
     {
         // Redirect to login page if the token is not valid or not present
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("home.jsp");
     }
 %>
 
