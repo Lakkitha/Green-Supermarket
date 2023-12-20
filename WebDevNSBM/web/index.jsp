@@ -17,7 +17,7 @@
 
     <body>
         <main>
-            <jsp:include page="Register.jsp" />
+            <jsp:include page="Email Verification.jsp" />
         </main>
     </body>
 </html>
