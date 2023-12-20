@@ -23,7 +23,7 @@
         <div class="container">
 
             <!-- Logo -->
-            <a class="navbar-brand fs-4" href="/index.html">Logo</a>
+            <a class="navbar-brand fs-4" href="personal.jsp">Logo</a>
 
             <!-- Toggle Menu Button -->
             <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"

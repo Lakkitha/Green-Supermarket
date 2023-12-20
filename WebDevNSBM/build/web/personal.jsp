@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : Dec 5, 2023, 9:08:18â¯PM
-    Author     : OMEN
+    Document   : personal
+    Created on : Dec 20, 2023, 9:26:44 AM
+    Author     : lakki
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="temp.css">
     <title>Green Supermarket</title>
 </head>
 
@@ -23,7 +23,7 @@
         <div class="container">
 
             <!-- Logo -->
-            <a class="navbar-brand fs-4" href="personal.jsp">Logo</a>
+            <a class="navbar-brand fs-4" href="/index.html">Logo</a>
 
             <!-- Toggle Menu Button -->
             <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
@@ -44,54 +44,28 @@
 
                 <!-- Sidebar Body -->
                 <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-                    <ul class="navbar-nav justify-content-center align-items-center fle flex-grow-1 pe-3">
+                    <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Home</a>
+                            <a class="nav-link" aria-current="page" href="#" style="font-size: 18px; font-weight: bold;">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Fruits"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Fruits</a>
+                            <a class="nav-link" href="#" style="font-size: 18px; font-weight: bold;">Fruits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Vegitables"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Vegetables</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Cart"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Cart</a>
+                            <a class="nav-link" href="#" style="font-size: 18px; font-weight: bold;">Vegetables</a>
                         </li>
                     </ul>
 
-
-                    <!-- Login/Signup -->
-                    <div class="d-flex flex-lg-row justify-content-center align-items-center gap-3">
-                        <a href="#login" class="text-black text-decoration-none">Login</a>
-                        <a href="#Signup" class="text-white text-decoration-none px-3 py-1 bg-primary rp"
-                            style="background-color: #f94ca4;">Signup</a>
+                    <!-- Icons and Total Price on the right side -->
+                    <div class="ms-auto navbar-icons">
+                        <i class="bi bi-person"></i> <!-- Person icon -->
+                        <i class="bi bi-cart"></i> <!-- Cart icon -->
+                        <span class="cart-total">Rs. 0.00</span> <!-- Cart total price -->
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- Main -->
-    <section class="main py-5">
-        <div class="container">
-            <div class="row py-5">
-                <div class="col-lg-6 py-5">
-                    <p class="m-0">Organic Products</p>
-                    <h1>Fresh Organic</h1>
-                    <div class="line my-4"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ut minus quasi, odio
-                        officiis, quod quisquam expedita quia possimus illo iste totam! Delectus cum repudiandae
-                        repellendus a! Eum, distinctio beatae?
-                    </p>
-                    <button class="mbtn1 mt -4">Fruits</button>
-                    <button class="mbtn2">Vegitables</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- About Section -->
     <section class="about py-5">
@@ -416,10 +390,9 @@
         </div>
     </section>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
+
