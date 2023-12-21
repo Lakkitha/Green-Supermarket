@@ -4,10 +4,10 @@
  */
 package Registration;
 
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
-import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,6 +16,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 
 /**
  *
@@ -97,9 +99,16 @@ public class Verification
     
     public static boolean IsValidToken(int userID, String verificationToken) 
     {
-        String tokenInDB = GetVerificationToken(userID);
-        
-        return tokenInDB.equals(verificationToken);
+        try 
+        {
+            String tokenInDB = URLDecoder.decode(GetVerificationToken(userID), StandardCharsets.UTF_8.toString());
+            return tokenInDB.equals(verificationToken);
+        } 
+        catch (UnsupportedEncodingException e) 
+        {
+            e.printStackTrace();
+            return false;  // Or throw a custom exception or handle it as needed
+        }
     }
     
     public static String GetVerificationToken(int userID)

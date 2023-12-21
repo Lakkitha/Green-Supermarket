@@ -10,13 +10,17 @@
 <%@page import="Registration.Verification"%>
 <%@page import="Registration.Registration"%>
 <%@page import="java.net.URLDecoder"%>
+<%@page import="java.nio.charset.StandardCharsets"%>
 
 <%
-    String verificationToken = (String) request.getParameter("token");
+    String verificationToken = request.getParameter("token");
     String email = (String) request.getParameter("email");
+    String lemail = (String) request.getAttribute("lemail");
     
     if (email != null && verificationToken != null)
     {
+        verificationToken = URLDecoder.decode(request.getParameter("token"), StandardCharsets.UTF_8.toString());
+        
         // Check if the verification token is valid and update the status in the database
         if (Verification.IsValidToken(Integer.parseInt(Registration.GetUserIdByEmail(email)), verificationToken)) 
         {
@@ -58,7 +62,7 @@
                 <div class="box">
                     <p>
                         You're almost there! We've sent an email to <br />
-                        <b><%= email%></b>
+                        <b><%= lemail%></b>
                     </p>
                 </div>
 
@@ -71,12 +75,14 @@
                 </div>
 
                 <div class="box">
-                    <p>Still can't find the email? No problem</p>
+                    <p>Still can't find the email? Refresh the page to get another email!</p>
                 </div>
-
+                
+                <!--
                 <button type="button" class="btn btn-dark rounded-0">
                     Resend Verification Email
                 </button>
+                !-->
 
                 <div class="box">
                     <p>Need help? <a href="#">Contact Us</a></p>
@@ -84,10 +90,10 @@
             </div>
         </main>
 
-        <script
+        <script>
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"
-        ></script>
+        </script>
     </body>
 </html>
