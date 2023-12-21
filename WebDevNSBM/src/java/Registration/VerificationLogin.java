@@ -55,9 +55,11 @@ public class VerificationLogin extends HttpServlet {
             if(rs.next())
             {
                 String username = rs.getString("ufname");
+                String address = rs.getString("uaddress");
                 
                 session.setAttribute("uid", id);
                 session.setAttribute("uname", username);
+                session.setAttribute("useraddress", address);
                 
                 // Generate a unique token and store it in the database and a cookie
                 String rememberMeToken = Login.GenerateUniqueToken();

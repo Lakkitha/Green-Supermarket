@@ -47,6 +47,7 @@ public class Login extends HttpServlet
                 boolean verified = rs.getBoolean("uverified");
                 String userID = rs.getString("id");
                 String username = rs.getString("ufname");
+                String address = rs.getString("uaddress");
                 
                 if (!verified)
                 {
@@ -68,6 +69,7 @@ public class Login extends HttpServlet
                 {
                     session.setAttribute("uid", userID);
                     session.setAttribute("uname", username);
+                    session.setAttribute("useraddress", address);
 
                     // Check if "Remember ME" is selected
                     if (rememberMe != null && rememberMe.equals("on"))
