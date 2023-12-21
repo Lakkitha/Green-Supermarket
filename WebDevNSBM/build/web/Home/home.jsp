@@ -23,7 +23,7 @@
         <div class="container">
 
             <!-- Logo -->
-            <a class="navbar-brand fs-4" href="/index.html">Logo</a>
+            <a class="navbar-brand fs-4" href="personal.jsp">Logo</a>
 
             <!-- Toggle Menu Button -->
             <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
@@ -308,7 +308,7 @@
                 <div class="col-lg-3 mt-2">
                     <div class="card py-3">
                         <div class="card-body">
-                            <span><i class="bi bi-truck"></i></span>
+                            <span><i class="bi bi-patch-check"></i></span>
                             <h5 class="head1 py-3">Organic Certified</h5>
                             <p class="per1">With $100 or more orders.</p>
                         </div>
@@ -317,7 +317,7 @@
                 <div class="col-lg-3 mt-2">
                     <div class="card py-3">
                         <div class="card-body">
-                            <span><i class="bi bi-truck"></i></span>
+                            <span><i class="bi bi-wallet"></i></span>
                             <h5 class="head1 py-3">Secure Payment</h5>
                             <p class="per1">With $100 or more orders.</p>
                         </div>
@@ -326,7 +326,7 @@
                 <div class="col-lg-3 mt-2">
                     <div class="card py-3">
                         <div class="card-body">
-                            <span><i class="bi bi-truck"></i></span>
+                            <span><i class="bi bi-person-check"></i></span>
                             <h5 class="head1 py-3">Friendly Support</h5>
                             <p class="per1">With $100 or more orders.</p>
                         </div>
@@ -336,86 +336,185 @@
         </div>
     </section>
 
-    <!-- Contact Stuff -->
-    <section class="contact py-5">
-        <div class="container py-3">
-            <div class="row">
-                <div class="col-lg-7">
-                    <p class="m-0">Green Agriculture</p>
-                    <h1>Our Best Products</h1>
-                    <div class="line my-4"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sequi totam iste placeat aliquam
-                        id cupiditate facere suscipit, beatae distinctio et ducimus amet repellendus earum debitis
-                        repudiandae, aliquid fugiat magni.
+   <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-left text-md-left">
+            <div class="row text-left text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+                        Green Supermarket
+                    </h5>
+                    <p>
+                        Discover freshness at Green Supermarket ? your eco-friendly haven
+                        for quality groceries. Locally sourced produce, organic options,
+                        and a curated selection make us your sustainable choice. Shop
+                        consciously with us!
                     </p>
-                    <div class="row py-3">
-                        <div class="col-lg-6">
-                            <div class="row pt-2">
-                                <div class="col-lg-3 col-sm-3 col-2">
-                                    <div class="circle">
-                                        <span><i class="bi bi-house-fill"></i></span>
-                                    </div>
-                                </div>
-                                    <div class="col-lg-8 col-sm-8 col-8 pt-2">
-                                        <p>PO Box 16-12 Collins Street West Victoria 8007</p>
-                                    </div>
-                            </div>
-                            <div class="row pt-2">
-                                <div class="col-lg-3 col-sm-3 col-2">
-                                    <div class="circle">
-                                        <span><i class="bi bi-house-fill"></i></span>
-                                    </div>
-                                </div>
-                                    <div class="col-lg-8 col-sm-8 col-8 pt-2">
-                                        <p>PO Box 16-12 Collins Street West Victoria 8007</p>
-                                    </div>
-                            </div>
-                            <div class="row pt-2">
-                                <div class="col-lg-3 col-sm-3 col-2">
-                                    <div class="circle">
-                                        <span><i class="bi bi-house-fill"></i></span>
-                                    </div>
-                                </div>
-                                    <div class="col-lg-8 col-sm-8 col-8 pt-2">
-                                        <p>PO Box 16-12 Collins Street West Victoria 8007</p>
-                                    </div>
-                            </div>
-                            <div class="row pt-2">
-                                <div class="col-lg-3 col-sm-3 col-2">
-                                    <div class="circle">
-                                        <span><i class="bi bi-house-fill"></i></span>
-                                    </div>
-                                </div>
-                                    <div class="col-lg-8 col-sm-8 col-8 pt-2">
-                                        <p>PO Box 16-12 Collins Street West Victoria 8007</p>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="text" placeholder="Name...">
-                            <input type="text" placeholder="Email...">
-                            <input type="text" placeholder="Phone...">
-                            <textarea name="" id="" placeholder="Message..."></textarea>
-                            <button class="cbtn mt-3">Send Now</button>
-                        </div>
+                    <ul class="list-unstyled list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white">
+                                <i class="fa-brands fa-amazon"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn-floating btn-sm text-white">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+                        Categories
+                    </h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            Groceries
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            Beverages
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            Fruits
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            Vegetables
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+                        Usefull Links
+                    </h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            Your account
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            FAQ
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            Privacy Policies
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none">
+                            Terms and Conditions
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+                        Contact
+                    </h5>
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i> No 10, Galle Road,
+                        Colpetty, Colombo - 03
+                    </p>
+                    <p><i class="fas fa-envelope mr-3"> </i> greensuperhub@gmail.com</p>
+                    <p><i class="fas fa-phone mr-3"> </i> +94 112584855</p>
+                    <p><i class="fas fa-print mr-3"> </i> +94 112056415</p>
+                </div>
+            </div>
+
+            <hr class="mb-4" />
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>
+                        Copyright ©2024 Green Supermarket, All rights reserved,
+                        <a href="#" style="text-decoration: none">
+                            <strong class="text-warning"> Group A69 </strong>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a
+                                    href="#"
+                                    class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px"
+                                    >
+                                    <i class="fab fa-cc-visa"> </i>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a
+                                    href="#"
+                                    class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px"
+                                    >
+                                    <i class="fab fa-cc-mastercard"> </i>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a
+                                    href="#"
+                                    class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px"
+                                    >
+                                    <i class="fab fa-paypal"> </i>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a
+                                    href="#"
+                                    class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px"
+                                    >
+                                    <i class="fa-brands fa-bitcoin"></i>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a
+                                    href="#"
+                                    class="btn-floating btn-sm text-white"
+                                    style="font-size: 23px"
+                                    >
+                                    <i class="fab fa-cc-apple-pay"> </i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <section class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 pt-3">
-                    <p>Copyrights 2024 @ Green Supermarket</p>
-                </div>
-                <div class="col-lg-3">
-                </div>
-            </div>
-        </div>
-    </section>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
