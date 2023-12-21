@@ -1,0 +1,100 @@
+/* 
+    Created on : Dec 16, 2023, 9:46:15 PM
+    Author     : Gagana
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: rgb(114, 114, 138);
+}
+
+.box-area {
+    width: 880px; /* Adjust the width as needed */
+    padding-right: 25px; /* Add right padding to reduce the container width */
+}
+
+/* Added this style to center content in the right box */
+.right-box {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    text-align: center;
+    padding: 40px 15px; /* Adjust padding for smaller screens */
+}
+
+/* Add this style to align the "Don't have an account yet?" text to the left */
+.row.not-centered {
+    justify-content: flex-start;
+}
+
+/* Login */
+.right-box .header-text,
+.right-box .input-group {
+    margin-bottom: 20px;
+}
+
+/* Placeholder styling */
+::placeholder {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-text {
+    text-align: left;
+}
+
+/* Changes the button color to red, invalid output */
+.is-invalid {
+    border: 2px solid red;
+}
+
+.is-valid {
+    border: 2px solid green;
+}
+
+/* Responsive adjustments not working :(
+
+@media (max-width: 767px) 
+{
+    .box-area 
+    {
+        padding: 0 10px;
+    }
+
+    .left-box 
+    {
+        height: 200px;
+    }
+
+    .right-box 
+    {
+        padding: 30px 10px;
+    }
+}
+*/
+
+/* 
+@media (max-width: 575px) 
+{
+    .box-area 
+    {
+        padding: 0 5px;
+    }
+
+    .left-box 
+    {
+        height: 150px;
+    }
+
+    .right-box 
+    {
+        padding: 20px 5px;
+    }
+}
+*/

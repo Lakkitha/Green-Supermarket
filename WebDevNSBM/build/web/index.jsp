@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Dec 20, 2023, 4:12:33 AM
+    Created on : Dec 20, 2023, 4:12:33â¯AM
     Author     : OMEN
 --%>
 
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% response.sendRedirect("Home/home.jsp");%>
+        <% response.sendRedirect("RegLog/Email_Verification.jsp");%>
     </body>
 </html>
