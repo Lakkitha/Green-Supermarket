@@ -12,7 +12,7 @@
     <meta name="description" content="Register | Green Supermarket" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/Style.css" />
+    <link rel="stylesheet" href="RegLog/CSS/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,6 +27,9 @@
     <header>
       <!-- Your header content goes here -->
     </header>
+      
+      <!-- Status being the status of the registration servlet -->
+    <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 
     <main
       class="container-fluid d-flex justify-content-center align-items-center min-vh-100"
@@ -36,7 +39,7 @@
         <div
           class="col-md-6 d-flex justify-content-center align-items-center flex-column left-box"
           style="
-            background-image: url('Images/Sample 2.jpg');
+            background-image: url('RegLog/Images/Sample 2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -48,7 +51,7 @@
         <div class="col-md-5 right-box">
           <div class="row align-items-center">
             <form
-              action=""
+              action="Registration"
               method="POST"
               id="registerForm"
               onsubmit="return validateForm()"
@@ -66,6 +69,7 @@
                   type="text"
                   class="form-control rounded-0"
                   id="firstName"
+                  name = "fname"
                   placeholder="First Name"
                   oninput="updateBorderColor('firstName')"
                   required
@@ -76,6 +80,7 @@
                   type="text"
                   class="form-control rounded-0"
                   id="lastName"
+                  name = "lname"
                   placeholder="Last Name"
                   oninput="updateBorderColor('lastName')"
                   required
@@ -86,6 +91,7 @@
                   type="email"
                   class="form-control rounded-0"
                   id="email"
+                  name="email"
                   placeholder="E-Mail"
                   oninput="updateBorderColor('email')"
                   required
@@ -96,6 +102,7 @@
                   type="text"
                   class="form-control rounded-0"
                   id="address"
+                  name="address"
                   placeholder="Address Line"
                   oninput="updateBorderColor('address')"
                   required
@@ -106,6 +113,7 @@
                   type="text"
                   class="form-control rounded-0"
                   id="postalCode"
+                  name="postal"
                   placeholder="Postal Code"
                   oninput="updateBorderColor('postalCode')"
                   required
@@ -116,6 +124,7 @@
                   type="text"
                   class="form-control rounded-0"
                   id="mobileNumber"
+                  name="contact"
                   placeholder="Mobile No."
                   oninput="updateBorderColor('mobileNumber')"
                   required
@@ -126,6 +135,7 @@
                   type="password"
                   class="form-control rounded-0"
                   id="password"
+                  name="password"
                   placeholder="Password"
                   oninput="updateBorderColor('password')"
                   required
@@ -133,9 +143,10 @@
               </div>
               <div class="col-md-6 mb-3">
                 <input
-                  type="text"
+                  type="password"
                   class="form-control rounded-0"
                   id="confirmPassword"
+                  name="rpassword"
                   placeholder="Confirm Password"
                   oninput="updateBorderColor('confirmPassword')"
                   required
@@ -148,6 +159,7 @@
                   <input
                     type="checkbox"
                     class="form-check-input rounded-0"
+                    name="formCheck"
                     id="formCheck"
                     oninput="updateBorderColor('formCheck')"
                   />
@@ -162,7 +174,8 @@
               <!-- Register button -->
               <div class="col-12 mb-3">
                 <button
-                  type="button"
+                  type="submit"
+                  formmethod="POST"
                   class="btn btn-lg btn-success w-100 fs-6 rounded-0"
                   onclick="validateForm()"
                 >
@@ -175,7 +188,7 @@
                 <div class="row header-text">
                   <small
                     >Already have an account?
-                    <a href="Login.jsp">Login</a></small
+                    <a href="login.jsp">Login</a></small
                   >
                 </div>
               </div>
@@ -186,6 +199,23 @@
         </div>
       </div>
     </main>
+    
+    <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+    <input type="hidden" id="error" value="<%= request.getAttribute("error") %>">
+
+    <script type="text/javascript">
+        let status = document.getElementById("status").value;
+        let error = document.getElementById("error").value;
+
+        if (status === "success") {
+            alert("Account created successfully", "success");
+            window.location.href = "verification.jsp";
+        } else if (status === "failed") {
+            alert("Registration failed. " + error);
+            // Remove the line below to prevent the automatic redirection
+            // window.location.href = "registration.jsp";
+        }
+    </script>
 
     <footer></footer>
 

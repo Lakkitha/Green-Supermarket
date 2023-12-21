@@ -12,7 +12,7 @@
     <meta name="description" content="Login | Green Supermarket" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/Style.css" />
+    <link rel="stylesheet" href="RegLog/CSS/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,16 +24,18 @@
 
   <body>
     <header></header>
-
+    
     <main
       class="container-fluid d-flex justify-content-center align-items-center min-vh-100"
     >
+        
+      <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
       <div class="row border p-3 bg-white shadow box-area">
         <!-- Left Box-->
         <div
           class="col-md-6 d-flex justify-content-center align-items-center flex-column left-box"
           style="
-            background-image: url('Images/Sample.jpg');
+            background-image: url('RegLog/Images/Sample.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -45,7 +47,7 @@
         <div class="col-md-5 right-box mt-5">
           <div class="row align-items-center">
             <form
-              action=""
+              action="Login"
               method="POST"
               id="loginForm"
               onsubmit="return validateForm()"
@@ -61,6 +63,7 @@
                   type="email"
                   class="form-control form-control-lg bg-light fs-6 rounded-0"
                   placeholder="E-Mail Address"
+                  name="useremail"
                   id="email"
                   required
                   oninput="updateBorderColor('email')"
@@ -71,6 +74,7 @@
                   type="password"
                   class="form-control form-control-lg bg-light fs-6 rounded-0"
                   placeholder="Password"
+                  name="password"
                   id="password"
                   required
                   oninput="updateBorderColor('password')"
@@ -82,6 +86,7 @@
                     type="checkbox"
                     class="form-check-input rounded-0"
                     id="formCheck"
+                    name="rememberMe"
                   />
                   <label
                     for="formCheck"
@@ -96,6 +101,8 @@
               <div class="col-12 mb-3">
                 <button
                   type="submit"
+                  formaction="Login"
+                  formmethod="POST"
                   class="btn btn-lg btn-success w-100 fs-6 rounded-0"
                 >
                   Login
@@ -105,7 +112,7 @@
                 <div class="row header-text">
                   <small>
                     Don't have an account yet?
-                    <a href="Register.jsp">Register</a>
+                    <a href="register.jsp">Register</a>
                   </small>
                 </div>
               </div>
@@ -116,12 +123,23 @@
         </div>
       </div>
     </main>
+      
     <footer></footer>
+    
+    <script type="text/javascript">
+        var status = document.getElementById("status").value;
+        if(status === "failed")
+        {
+          alert("Sorry", "wrong username or password", "failed");
+        }
+    </script>
+    
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
     ></script>
-    <script src="JavaScript/Login.js"></script>
+    
+    <script src="RegLog/JavaScript/Login.js"></script>
   </body>
 </html>

@@ -4,6 +4,34 @@
     Author     : Gagana
 --%>
 
+<%@page import="java.sql.*" %>
+<%@page import="javax.servlet.*" %>
+<%@page import="javax.servlet.http.*" %>
+<%@page import="Registration.Verification"%>
+<%@page import="Registration.Registration"%>
+<%@page import="java.net.URLDecoder"%>
+
+<%
+    String verificationToken = (String) request.getParameter("token");
+    String email = (String) request.getParameter("email");
+    
+    if (email != null && verificationToken != null)
+    {
+        // Check if the verification token is valid and update the status in the database
+        if (Verification.IsValidToken(Integer.parseInt(Registration.GetUserIdByEmail(email)), verificationToken)) 
+        {
+            // Update the verification status
+            Verification.UpdateVerificationStatus(email);
+            
+            // Login with the verification instead, so store id in session
+            session.setAttribute("user_id", Registration.GetUserIdByEmail(email));
+
+            // If verified, redirect to the home page
+            response.sendRedirect("VerificationLogin");
+        }
+    }
+%>
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -11,7 +39,7 @@
         <meta name="author" content="Gagana" />
         <meta name="description" content="Email Verification | Green Supermarket" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="CSS/Email Verification.css" />
+        <link rel="stylesheet" href="RegLog/CSS/verification.css" />
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -23,14 +51,14 @@
     <body>
         <main>
             <div class="container rounded-0">
-                <img src="Images/Trader's Joe.png" alt="Logo" class="logo" />
+                <img src="RegLog/Images/Trader's Joe.png" alt="Logo" class="logo" />
 
                 <h2>Please verify your email</h2>
 
                 <div class="box">
                     <p>
                         You're almost there! We've sent an email to <br />
-                        <b>test@gmail.com</b>
+                        <b><%= email%></b>
                     </p>
                 </div>
 

@@ -1,12 +1,18 @@
 <%-- 
-    Document   : index
-    Created on : Dec 5, 2023, 9:08:18â¯PM
-    Author     : OMEN
+    Document   : personal
+    Created on : Dec 21, 2023, 1:44:45 PM
+    Author     : lakki
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
+    
+<% 
+        // Retrieve session attributes
+        String userId = (String) session.getAttribute("uid");
+        String username = (String) session.getAttribute("uname");
+    %>
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +22,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="Home/homeStyle.css">
+    <link rel="stylesheet" href="Home/nav.css">
     <title>Green Supermarket</title>
 </head>
 
@@ -26,7 +33,7 @@
         <div class="container">
 
             <!-- Logo -->
-            <a class="navbar-brand fs-4" href="personal.jsp">Logo</a>
+            <a class="navbar-brand fs-4" href="index.jsp">Logo</a>
 
             <!-- Toggle Menu Button -->
             <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
@@ -47,36 +54,51 @@
 
                 <!-- Sidebar Body -->
                 <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-                    <ul class="navbar-nav justify-content-center align-items-center fle flex-grow-1 pe-3">
+                    <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Home</a>
+                            <a class="nav-link" aria-current="page" href="#"
+                                style="font-size: 18px; font-weight: bold;">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Fruits"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Fruits</a>
+                            <a class="nav-link" href="#" style="font-size: 18px; font-weight: bold;">Fruits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Vegitables"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Vegetables</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Cart"
-                                style="color: #333; font-size: 18px; font-weight: bold;">Cart</a>
+                            <a class="nav-link" href="#" style="font-size: 18px; font-weight: bold;">Vegetables</a>
                         </li>
                     </ul>
 
+                    <!-- Icons and Total Price on the right side -->
+                    <div class="ms-auto navbar-icons">
+                        <i class="bi bi-person" onclick="toggleMenu()"></i> <!-- Person icon -->
+                        <i class="bi bi-cart"></i> <!-- Cart icon -->
+                        <span class="cart-total">Rs. 0.00</span> <!-- Cart total price -->
 
-                    <!-- Login/Signup -->
-                    <div class="d-flex flex-lg-row justify-content-center align-items-center gap-3">
-                        <a href="#login" class="text-black text-decoration-none">Login</a>
-                        <a href="#Signup" class="text-white text-decoration-none px-3 py-1 bg-primary rp"
-                            style="background-color: #f94ca4;">Signup</a>
+                        <div class="sub-menu-wrap" id="subMenu">
+                            <div class="sub-menu">
+                                <div class="user-info">
+                                    <i class="bi bi-person"></i>
+                                    <h><%= username %></h>
+                                </div>
+                                <hr>
+                                <a href="#" class="sub-menu-link">
+                                    <i class="bi bi-file-person-fill"></i>
+                                    <p>Edit Profile</p>
+                                    <span>></span>
+                                </a>
+                                <form action="Logout" method="POST">
+                                    <button class="sub-menu-link" type="submit">
+                                        <i class="bi bi-box-arrow-right"></i>
+                                        <p>Log out</p>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
     <!-- Main -->
     <section class="main py-5">
         <div class="container">
@@ -170,8 +192,6 @@
                         id cupiditate facere suscipit, beatae distinctio et ducimus amet repellendus earum debitis
                         repudiandae, aliquid fugiat magni.</p>
                 </div>
-                
-
                 <div class="row py-3">
                     <div class="col-lg-4">
                         <div class="card p-2">
@@ -182,7 +202,7 @@
                                     <span><i class="bi bi-star-fill"></i></span>
                                     <span><i class="bi bi-star-fill"></i></span>
                                 </div>
-                                <img src="images/orange.jpg" alt="orange" class="img-fluid pb-3">
+                                <img src="Home/Images/orange.jpg" alt="orange" class="img-fluid pb-3">
                                 <h4 class="head1">Orange</h4>
                                 <p class="per1">2 x 454g / 16oz</p>
                                 <h4 class="head1">$43.00</h4>
@@ -199,8 +219,8 @@
                                     <span><i class="bi bi-star"></i></span>
                                     <span><i class="bi bi-star"></i></span>
                                 </div>
-                                <img src="images/Pom.jpg" alt="orange" class="img-fluid pb-3">
-                                <h4 class="head1">Pomengrenate</h4>
+                                <img src="Home/Images/Pom.jpg" alt="orange" class="img-fluid pb-3">
+                                <h4 class="head1">Orange</h4>
                                 <p class="per1">2 x 454g / 16oz</p>
                                 <h4 class="head1">$43.00</h4>
                                 <button class="btnc my-4">ADD TO CART</button>
@@ -216,16 +236,17 @@
                                     <span><i class="bi bi-star-half"></i></span>
                                     <span><i class="bi bi-star"></i></span>
                                 </div>
-                                <img src="images/papaya.jpg" alt="orange" class="img-fluid pb-3">
-                                <h4 class="head1">Papaya</h4>
+                                <img src="Home/Images/papaya.jpg" alt="orange" class="img-fluid pb-3">
+                                <h4 class="head1">Orange</h4>
                                 <p class="per1">2 x 454g / 16oz</p>
                                 <h4 class="head1">$43.00</h4>
                                 <button class="btnc my-4">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
-                
-                <div class="col-lg-4">
+                </div>
+                <div class="row py-3">
+                    <div class="col-lg-4">
                         <div class="card p-2">
                             <div class="card-body">
                                 <div class="star">
@@ -234,7 +255,7 @@
                                     <span><i class="bi bi-star-fill"></i></span>
                                     <span><i class="bi bi-star-fill"></i></span>
                                 </div>
-                                <img src="images/strawnb.jpg" alt="orange" class="img-fluid pb-3">
+                                <img src="Home/Images/strawnb.jpg" alt="orange" class="img-fluid pb-3">
                                 <h4 class="head1">Strawberry</h4>
                                 <p class="per1">2 x 454g / 16oz</p>
                                 <h4 class="head1">$43.00</h4>
@@ -251,8 +272,8 @@
                                     <span><i class="bi bi-star"></i></span>
                                     <span><i class="bi bi-star"></i></span>
                                 </div>
-                                <img src="images/melon.jpg" alt="orange" class="img-fluid pb-3">
-                                <h4 class="head1">Melon</h4>
+                                <img src="Home/Images/melon.jpg" alt="orange" class="img-fluid pb-3">
+                                <h4 class="head1">Water Melon</h4>
                                 <p class="per1">2 x 454g / 16oz</p>
                                 <h4 class="head1">$43.00</h4>
                                 <button class="btnc my-4">ADD TO CART</button>
@@ -268,7 +289,7 @@
                                     <span><i class="bi bi-star-half"></i></span>
                                     <span><i class="bi bi-star"></i></span>
                                 </div>
-                                <img src="images/manngo.jpg" alt="orange" class="img-fluid pb-3">
+                                <img src="Home/Images/manngo.jpg" alt="orange" class="img-fluid pb-3">
                                 <h4 class="head1">Mango</h4>
                                 <p class="per1">2 x 454g / 16oz</p>
                                 <h4 class="head1">$43.00</h4>
@@ -339,7 +360,7 @@
         </div>
     </section>
 
-   <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container text-left text-md-left">
             <div class="row text-left text-md-left">
@@ -519,10 +540,24 @@
         </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+
+        // Add event listeners for mouseenter and mouseleave
+        document.querySelector('.navbar-icons').addEventListener('mouseenter', openMenu);
+        document.querySelector('.navbar-icons').addEventListener('mouseleave', closeMenu);
+
+        function openMenu() {
+            subMenu.classList.add("open-menu");
+        }
+
+        function closeMenu() {
+            subMenu.classList.remove("open-menu");
+        }
+    </script>
 </body>
 
 </html>
