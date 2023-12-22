@@ -1,0 +1,54 @@
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: red;
+}
+
+.price {
+  color: #333;
+}
+
+.dropdown-menu {
+  border: 1px solid #dee2e6;
+}
+
+.dropdown-item {
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.logo {
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Animation to Navbar */
+.navbar {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.navbar-loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
