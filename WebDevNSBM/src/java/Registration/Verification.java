@@ -99,16 +99,11 @@ public class Verification
     
     public static boolean IsValidToken(int userID, String verificationToken) 
     {
-        try 
-        {
-            String tokenInDB = URLDecoder.decode(GetVerificationToken(userID), StandardCharsets.UTF_8.toString());
-            return tokenInDB.equals(verificationToken);
-        } 
-        catch (UnsupportedEncodingException e) 
-        {
-            e.printStackTrace();
-            return false;  // Or throw a custom exception or handle it as needed
-        }
+        String tokenInDB = GetVerificationToken(userID);
+        System.out.println("Decoded Token in DB: " + tokenInDB);
+        System.out.println("Decoded verification token: " + verificationToken);
+
+        return tokenInDB.equals(verificationToken);
     }
     
     public static String GetVerificationToken(int userID)
@@ -126,6 +121,7 @@ public class Verification
             
             if (rs.next()) {
                 ver_token = rs.getString("verification_token");
+                ver_token = new String(Base64.getDecoder().decode(ver_token), StandardCharsets.UTF_8);
             }
         }
         catch (SQLException | ClassNotFoundException e)
@@ -140,11 +136,15 @@ public class Verification
     {
         try
         {
+            // Encode the verification token using Base64
+            byte[] tokenBytes = Base64.getEncoder().encode(verificationToken.getBytes(StandardCharsets.UTF_8));
+            String encodedToken = new String(tokenBytes, StandardCharsets.UTF_8);
+
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(RegConnection.CONNECTION_URL, RegConnection.CONNECTION_NAME, RegConnection.CONNECTION_PASS);
             PreparedStatement pst = con.prepareStatement("UPDATE usertokens SET verification_token = ? WHERE user_id = ?");
             
-            pst.setString(1, verificationToken);
+            pst.setString(1, encodedToken);
             pst.setInt(2, userID);
             pst.executeUpdate();
         }

@@ -19,7 +19,8 @@
     
     if (email != null && verificationToken != null)
     {
-        verificationToken = URLDecoder.decode(request.getParameter("token"), StandardCharsets.UTF_8.toString());
+         // Manually replace %20 with a space after decoding
+        verificationToken = URLDecoder.decode(verificationToken, StandardCharsets.UTF_8.toString()).replace(" ", "+");
         
         // Check if the verification token is valid and update the status in the database
         if (Verification.IsValidToken(Integer.parseInt(Registration.GetUserIdByEmail(email)), verificationToken)) 
