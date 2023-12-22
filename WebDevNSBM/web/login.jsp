@@ -44,7 +44,7 @@
         ></div>
 
         <!-- Right Box-->
-        <div class="col-md-5 right-box mt-5">
+        <div class="col-md-5 right-boxlogin mt-5">
           <div class="row align-items-center">
             <form
               action="Login"

@@ -5,7 +5,7 @@
 --%>
 
 <!DOCTYPE html>
-<html lang="en-US">
+ <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Gagana" />
@@ -39,46 +39,52 @@
         <div
           class="col-md-6 d-flex justify-content-center align-items-center flex-column left-box"
           style="
-            background-image: url('RegLog/Images/Sample 2.jpg');
+            background-image: url('RegLog/Images/Sample_2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 800px;
+            height: 557px;
+            margin-left: 5px;
           "
         ></div>
 
         <!-- Right Box -->
-        <div class="col-md-5 right-box">
+        <div class="col-md-5 right-boxregister">
+            
           <div class="row align-items-center">
             <form
               action="Registration"
               method="POST"
               id="registerForm"
               onsubmit="return validateForm()"
-              class="row g-3"
+              class="row g-1"
+              
+              
+              
             >
               <div class="col-12 mb-2">
-                <div class="header-text mb-4 text-left">
-                  <h2>Register</h2>
+                <div class="header-textregister mb-1 text-left">
+                  <h2>Register</h2> 
                   <p>Create your account, it's free!</p>
                 </div>
               </div>
               <!-- Input fields -->
               <div class="col-md-6 mb-3">
+                  
                 <input
                   type="text"
-                  class="form-control rounded-0"
+                  class="form-control rounded-0 "
                   id="firstName"
                   name = "fname"
                   placeholder="First Name"
                   oninput="updateBorderColor('firstName')"
                   required
-                />
+                >
               </div>
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6 mb-3" > 
                 <input
                   type="text"
-                  class="form-control rounded-0"
+                  class="form-control rounded-0 "
                   id="lastName"
                   name = "lname"
                   placeholder="Last Name"
@@ -100,7 +106,7 @@
               <div class="col-12 mb-3">
                 <input
                   type="text"
-                  class="form-control rounded-0"
+                  class="form-control rounded-0 "
                   id="address"
                   name="address"
                   placeholder="Address Line"
@@ -111,7 +117,7 @@
               <div class="col-md-6 mb-3">
                 <input
                   type="text"
-                  class="form-control rounded-0"
+                  class="form-control rounded-0 "
                   id="postalCode"
                   name="postal"
                   placeholder="Postal Code"
@@ -122,7 +128,7 @@
               <div class="col-md-6 mb-3">
                 <input
                   type="text"
-                  class="form-control rounded-0"
+                  class="form-control rounded-0 "
                   id="mobileNumber"
                   name="contact"
                   placeholder="Mobile No."
@@ -133,7 +139,7 @@
               <div class="col-md-6 mb-3">
                 <input
                   type="password"
-                  class="form-control rounded-0"
+                  class="form-control rounded-0 "
                   id="password"
                   name="password"
                   placeholder="Password"
@@ -144,7 +150,7 @@
               <div class="col-md-6 mb-3">
                 <input
                   type="password"
-                  class="form-control rounded-0"
+                  class="form-control rounded-0 "
                   id="confirmPassword"
                   name="rpassword"
                   placeholder="Confirm Password"
@@ -158,14 +164,14 @@
                 <div class="form-check">
                   <input
                     type="checkbox"
-                    class="form-check-input rounded-0"
+                    class="form-check-input rounded-0 "
                     name="formCheck"
                     id="formCheck"
                     oninput="updateBorderColor('formCheck')"
                   />
                   <label
                     for="formCheck"
-                    class="form-check-label text-secondary rounded-0"
+                    class="form-check-label text-secondary rounded-0 "
                     ><small> I accept terms and conditions </small></label
                   >
                 </div>
@@ -176,7 +182,7 @@
                 <button
                   type="submit"
                   formmethod="POST"
-                  class="btn btn-lg btn-success w-100 fs-6 rounded-0"
+                  class="btn btn-lg btn-success w-100 fs-6 rounded-0 "
                   onclick="validateForm()"
                 >
                   Register
@@ -191,7 +197,8 @@
                     <a href="login.jsp">Login</a></small
                   >
                 </div>
-              </div>
+              </div
+          
             </form>
 
             <div id="error-message" class="col-12 text-danger mb-3"></div>
