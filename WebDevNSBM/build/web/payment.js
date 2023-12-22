@@ -17,10 +17,17 @@ paypal.Buttons({
     onApprove: function (data,actions){
         return actions.order.capture ().then(function(details){
             console.log(details);
-            window.location.replace("http://localhost:8080/WebDevNSBM/PaymentSuccess.jsp")
+            var paymentId = details.id;
+            var status = details.status;
+            var amount = details.purchase_units[0].amount.value; // Assuming there is only one purchase unit
+
+        // Redirect to PaymentSuccess.jsp with additional information as query parameters
+        window.location.replace("http://localhost:8080/WebDevNSBM/PaymentSuccess.jsp?paymentId=" + paymentId + "&status=" + status + "&amount=" + amount);
         });
     },
     onCancel: function(data){
-        window.location.replace("http://localhost:8080/WebDevNSBM/PaymentCancel.jsp")
+        // Redirect to PaymentCancel.jsp with additional information as query parameters
+        window.location.replace("http://localhost:8080/WebDevNSBM/PaymentCancel.jsp?cancelReason=User Canceled");
     }
+
 }).render('#paypal-button');

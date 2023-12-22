@@ -1,9 +1,3 @@
-<%-- 
-    Document   : Recipt
-    Created on : 14 Dec 2023, 15:03:04
-    Author     : CHAMATH
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,10 +42,26 @@
   </header>
 
   <main>
-      <div>
-          <h2>Thank you for your purchase!</h2>
-          <p class="message">Your payment was successful.</p>
-      </div>
+    <div>
+      <h2>Thank you for your purchase!</h2>
+      <p class="message">Your payment was successful.</p>
+
+    <!-- Retrieve and display additional information -->
+      <%
+        String paymentId = request.getParameter("paymentId");
+        String status = request.getParameter("status");
+        String amount = request.getParameter("amount");
+
+        if (paymentId != null && status != null && amount != null) {
+      %>
+          <p>Payment ID: <%= paymentId %></p>
+          <p>Status: <%= status %></p>
+          <p>Amount: <%= amount %></p>
+          <!-- Add more information as needed -->
+      <%
+        }
+      %>
+    </div>
   </main>
 
 </body>

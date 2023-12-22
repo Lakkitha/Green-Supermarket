@@ -47,11 +47,23 @@
     <h1>Payment Failed</h1>
   </header>
 
-  <main>
-      <div>
-              <h2>Oops! Something went wrong.</h2>
-              <p class="message">Your payment was not successful. Please try again.</p>
-      </div>
+ <main>
+    <div>
+      <h2>Oops! Something went wrong.</h2>
+      <p class="message">Your payment was not successful. Please try again.</p>
+
+      <!-- Retrieve and display additional information -->
+      <%
+        String cancelReason = request.getParameter("cancelReason");
+
+        if (cancelReason != null) {
+      %>
+          <p>Cancel Reason: <%= cancelReason %></p>
+          <!-- Add more information as needed -->
+      <%
+        }
+      %>
+    </div>
   </main>
 
 </body>
