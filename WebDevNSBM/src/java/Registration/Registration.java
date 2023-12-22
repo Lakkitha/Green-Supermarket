@@ -84,16 +84,22 @@ public class Registration extends HttpServlet
                 // Generate verification token
                 String verificationToken = Verification.GenerateVerificationToken(uemail);
                 
+                String encodedToken = URLEncoder.encode(verificationToken, StandardCharsets.UTF_8.toString());
+                
                 // Store encoded token in database
-                Verification.StoreVerificationToken(Integer.parseInt(userId), verificationToken);
+                Verification.StoreVerificationToken(Integer.parseInt(userId), encodedToken);
                 
                 // Construct verification link
-                String verificationLink = "http://localhost:8080/WebDevNSBM/verification.jsp?token=" + verificationToken + "&email=" + uemail;
+                String verificationLink = "http://localhost:8080/WebDevNSBM/verification.jsp?token=" + encodedToken + "&email=" + uemail;
 
                 // Send verification email with the link
                 Verification.SendVerificationEmail(uemail, verificationLink);
                 
                 request.setAttribute("status", "success");
+                request.setAttribute("lemail", uemail);
+                request.setAttribute("userid", userId);
+                
+                dispatcher = request.getRequestDispatcher("verification.jsp");
             }
             else
             {

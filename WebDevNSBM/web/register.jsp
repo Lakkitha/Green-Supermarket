@@ -216,7 +216,7 @@
 
         if (status === "success") {
             alert("Account created successfully", "success");
-            window.location.href = "verification.jsp";
+            // window.location.href = "verification.jsp";
         } else if (status === "failed") {
             alert("Registration failed. " + error);
             // Remove the line below to prevent the automatic redirection

@@ -6,6 +6,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.UUID;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import javax.servlet.http.Cookie;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
@@ -53,15 +55,20 @@ public class Login extends HttpServlet
                 {
                     // Generate verification token
                     String verificationToken = Verification.GenerateVerificationToken(uemail);
+                    
+                    String encodedToken = URLEncoder.encode(verificationToken, StandardCharsets.UTF_8.toString());
 
                     // Store encoded token in database
-                    Verification.StoreVerificationToken(Integer.parseInt(userID), verificationToken);
+                    Verification.StoreVerificationToken(Integer.parseInt(userID), encodedToken);
 
                     // Construct verification link
-                    String verificationLink = "http://localhost:8080/WebDevNSBM/verification.jsp?token=" + verificationToken + "&email=" + uemail;
+                    String verificationLink = "http://localhost:8080/WebDevNSBM/verification.jsp?token=" + encodedToken + "&email=" + uemail;
 
                     // Send verification email with the link
                     Verification.SendVerificationEmail(uemail, verificationLink);
+                    
+                    request.setAttribute("lemail", uemail);
+                    request.setAttribute("userid", userID);
                     
                     dispatcher = request.getRequestDispatcher("verification.jsp");
                 }
