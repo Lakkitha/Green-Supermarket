@@ -1,10 +1,9 @@
 <%-- 
     Document   : index
-    Created on : Dec 5, 2023, 9:08:18â¯PM
+    Created on : Dec 5, 2023, 9:08:18 PM
     Author     : OMEN
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -20,85 +19,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="Home/homeStyle.css">
-    <link rel="stylesheet" href="Home/nav.css"/>
     <title>Home Page</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <img src="Images/joe.png" alt="Supermarket Logo" class="logo" height="20px" width="120px">
-                </a>
-                <!-- Button to toggle navigation on smaller screens -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Centered Page Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="navbar-nav mx-auto">
-                        <a class="nav-link active" aria-current="page" href="#"> <b> Home </b> </a>
-                        <a class="nav-link" href="#"> <b> Fruits</b></a>
-                        <a class="nav-link" href="#"><b> Vegetables </b></a>
-                        <a class="nav-link" href="#"> <b>About</b></a>
-                    </div>
-                </div>
-                <!-- Icons and Price on Right Side -->
-                <div class="d-flex align-items-center ms-auto">
-                    <!-- Price Display -->
-                    <span class="price me-3"> <b> $ 1500.00 </b> </span>
-                    <!-- Search Icon Dropdown -->
-                    <div class="nav-item dropdown me-3" id="searchDropdown">
-                        <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-search"></i>
-                        </a>
-                        <div class="dropdown-menu rounded-0" id="searchDropdownMenu">
-                            <!-- Add search input field and button -->
-                            <form class="p-2">
-                                <div class="input-group">
-                                    <input type="text" class="form-control rounded-0" placeholder="Search..."
-                                        aria-label="Search" aria-describedby="button-addon2">
-                                    <button class="btn btn-outline-success rounded-0" type="button" id="button-addon2">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Cart Icon Dropdown -->
-                    <a class="nav-link me-3" href="#">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-
-                    <!-- Account Icon and Username Dropdown -->
-                    <div class="nav-item dropdown me-3" id="accountDropdown">
-                        <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user"></i>
-                            <span class="username-placeholder"> <b> Kusal Videshan </b></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-start rounded-0" id="accountDropdownMenu"
-                            style="max-height: 200px; overflow-y: auto;">
-                            <!-- Add dropdown menu items for account options -->
-                            <div class="dropdown-item">
-                                <p class="small-font"> Kusal Videshan</p>
-                                <p class="small-font">123 Main Street, Cityville</p>
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <!-- Convert Profile and Logout links to buttons -->
-                            <button class="dropdown-item btn btn-link" type="button">
-                                <i class="fa-solid fa-address-card"></i> Profile
-                            </button>
-                            <button class="dropdown-item btn btn-link" type="button">
-                                <i class="fa-solid fa-right-from-bracket"></i> Logout
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <jsp:include page="navbar.jsp"/>
     </header>
 
     <main>
@@ -228,165 +154,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4 img-fluid">
-        <div class="container text-left text-md-left">
-            <div class="row text-left text-md-left">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <img src="Home/images/joe.png" height="30px" width="150px"> <br> <br>
-                    <p>
-                        Discover freshness at Green Supermarket? your eco-friendly haven
-                        for quality groceries. Locally sourced produce, organic options,
-                        and a curated selection make us your sustainable choice. Shop
-                        consciously with us!
-                    </p>
-                    <ul class="list-unstyled list-inline mb-0">
-                        <li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm text-white">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm text-white">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm text-white">
-                                <i class="fab fa-x-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm text-white">
-                                <i class="fa-brands fa-amazon"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="btn-floating btn-sm text-white">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="mb-4 font-weight-bold text-warning">
-                        Categories
-                    </h5>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            Groceries
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            Beverages
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            Fruits
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            Vegetables
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="mb-4 font-weight-bold text-warning">
-                        Useful Links
-                    </h5>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            Your account
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            FAQ
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            Privacy Policies
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" class="text-white" style="text-decoration: none">
-                            Terms and Conditions
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="mb-4 font-weight-bold text-warning">
-                        Contact
-                    </h5>
-                    <p>
-                        <i class="fa-solid fa-location-dot"></i> No 10, Galle Road,
-                        Colpetty, Colombo - 03
-                    </p>
-                    <p><i class="fas fa-envelope mr-3"> </i> greensuperhub@gmail.com</p>
-                    <p><i class="fas fa-phone mr-3"> </i> +94 112584855</p>
-                    <p><i class="fas fa-print mr-3"> </i> +94 112056415</p>
-                </div>
-            </div>
-
-            <hr class="mb-4" />
-
-            <div class="row align-items-center">
-                <div class="col-md-7 col-lg-8">
-                    <p>
-                        Copyright ©2024 Green Supermarket, All rights reserved,
-                        <a href="#" style="text-decoration: none">
-                            <strong class="text-warning"> Group A83 </strong>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-md-5 col-lg-4">
-                    <div class="text-center text-md-right">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
-                                    <i class="fab fa-cc-visa"> </i>
-                                </a>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
-                                    <i class="fab fa-cc-mastercard"> </i>
-                                </a>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
-                                    <i class="fab fa-paypal"> </i>
-                                </a>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
-                                    <i class="fa-brands fa-bitcoin"></i>
-                                </a>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
-                                    <i class="fab fa-cc-apple-pay"> </i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <jsp:include page="footer.jsp"/>
     </footer>
-
     
-
     <script>
         /* Navbar Script - Didn't work exteranlly :( */
         const searchDropdown = document.getElementById('searchDropdown');
