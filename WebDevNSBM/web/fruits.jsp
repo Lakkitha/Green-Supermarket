@@ -23,6 +23,13 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
         <title> Fruits </title>
     </head>
+    
+    <style>
+        .banner-text
+        {
+            margin-top: 20px;
+        }
+    </style>
 
     <body>
         <jsp:include page="navbar.jsp"/>
@@ -56,6 +63,7 @@
                     <div class="col-lg-4 fade-in">
                         <div class="card shadow-sm">
                             <div class="card-body">
+                                <!--
                                 <div class="star">
                                     <span class="star-item"><i class="bi bi-star-fill"></i></span>
                                     <span class="star-item"><i class="bi bi-star-fill"></i></span>
@@ -63,6 +71,7 @@
                                     <span class="star-item"><i class="bi bi-star-fill"></i></span>
                                     <span class="star-item"><i class="bi bi-star"></i></span>
                                 </div>
+                                !-->
                                 <img src="Home/images/orange.jpg" alt="orange" class="img-fluid pb-3"
                                      style="height: 200px; width: 400px;">
                                 <h4 class="head1">Orange</h4>

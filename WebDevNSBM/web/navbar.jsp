@@ -35,8 +35,8 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- Centered Page Links -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <div class="navbar-nav mx-auto">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="home.jsp"> <b> Home </b> </a>
                             <a class="nav-link" href="fruits.jsp"> <b> Fruits</b></a>
                             <a class="nav-link" href="vegetables.jsp"><b> Vegetables </b></a>

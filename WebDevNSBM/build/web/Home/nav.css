@@ -52,3 +52,15 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+.collapse.navbar-collapse
+{
+    margin-left: 165px;
+}
+
+/* Override styling for smaller screens when the dropdown is open */
+@media (max-width: 992px) {
+    .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+        margin-left: 0;
+    }
+}

@@ -17,7 +17,8 @@
     </head>    
     <body>
         
-        <header>  
+        <header>
+            <jsp:include page="navbar.jsp"/>
             <!-- Banner -->
             <div class="banner-container">
                 <img src="Home/images/aboutbanner.jpg" alt="Banner Image" class="banner-image">
