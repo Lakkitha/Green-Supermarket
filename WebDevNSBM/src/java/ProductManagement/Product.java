@@ -10,7 +10,7 @@ package ProductManagement;
  */
 public class Product 
 {
-    public static final int CategorySize = 6; // The category size of how products are shown
+    public static final int CategorySize = 8; // The category size of how products are shown
     
     private int id;
     private String name;

@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;
+import com.google.gson.Gson;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -57,7 +58,7 @@ public class RequestProducts extends HttpServlet {
         processRequest(request, response);
         
         List<Product> products = FetchProducts();
-        
+
         request.setAttribute("products", products);
         
         RequestDispatcher dispatcher = request.getRequestDispatcher("Fruits.jsp");
