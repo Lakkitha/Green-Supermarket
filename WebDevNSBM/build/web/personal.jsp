@@ -148,7 +148,7 @@
                                     <span><i class="bi bi-star"></i></span>
                                     <span><i class="bi bi-star"></i></span>
                                 </div>
-                                <img src="Home/Images/Pom.jpg" alt="orange" class="img-fluid pb-3">
+                                <img src="Home/Images/Pomegranate.jpg" alt="orange" class="img-fluid pb-3">
                                 <h4 class="head1">Orange</h4>
                                 <p class="per1">2 x 454g / 16oz</p>
                                 <h4 class="head1">$43.00</h4>

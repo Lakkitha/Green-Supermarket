@@ -51,10 +51,10 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                         <div class="navbar-nav">
                             <a class="nav-link active" aria-current="page" href="home.jsp"> <b> Home </b> </a>
-                            <a class="nav-link" href="fruits.jsp"> <b> Fruits</b></a>
-                            <a class="nav-link" href="vegetables.jsp"><b> Vegetables </b></a>
-                            <a class="nav-link" href="beverages.jsp"><b> Beverages </b></a>
-                            <a class="nav-link" href="about.jsp"> <b>About</b></a>
+                            <a class="nav-link" href="fruits.jsp?page=fruits"> <b> Fruits</b></a>
+                            <a class="nav-link" href="vegetables.jsp?page=vegetables"><b> Vegetables </b></a>
+                            <a class="nav-link" href="beverages.jsp?page=beverages"><b> Beverages </b></a>
+                            <a class="nav-link" href="productDetails.jsp"> <b>About</b></a>
                         </div>
                     </div>
                     <!-- Icons and Price on Right Side -->
