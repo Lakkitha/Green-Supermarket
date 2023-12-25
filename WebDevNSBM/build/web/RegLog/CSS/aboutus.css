@@ -1,0 +1,47 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}

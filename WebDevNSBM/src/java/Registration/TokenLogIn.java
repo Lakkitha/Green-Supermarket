@@ -71,7 +71,7 @@ public class TokenLogIn extends HttpServlet
                             session.setAttribute("uid", userID);
                             session.setAttribute("uname", username);
                             
-                            dispatcher = request.getRequestDispatcher("personal.jsp");
+                            dispatcher = request.getRequestDispatcher("home.jsp");
                         }
                     }
                 }

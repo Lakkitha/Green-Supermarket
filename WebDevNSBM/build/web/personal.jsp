@@ -7,12 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-    
-<% 
-        // Retrieve session attributes
-        String userId = (String) session.getAttribute("uid");
-        String username = (String) session.getAttribute("uname");
-    %>
+   
 
 <head>
     <meta charset="UTF-8">
@@ -29,75 +24,9 @@
 
 <body class="vh-100">
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 255, 255, 0.466);">
-        <div class="container">
-
-            <!-- Logo -->
-            <a class="navbar-brand fs-4" href="index.jsp">Logo</a>
-
-            <!-- Toggle Menu Button -->
-            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- SideBar -->
-            <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-
-                <!-- Sidebar Header -->
-                <div class="offcanvas-header text-white border-bottom">
-                    <h5 class="offcanvas-title text-black" id="offcanvasNavbarLabel">Logo</h5>
-                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-
-                <!-- Sidebar Body -->
-                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-                    <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#"
-                                style="font-size: 18px; font-weight: bold;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 18px; font-weight: bold;">Fruits</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-size: 18px; font-weight: bold;">Vegetables</a>
-                        </li>
-                    </ul>
-
-                    <!-- Icons and Total Price on the right side -->
-                    <div class="ms-auto navbar-icons">
-                        <i class="bi bi-person" onclick="toggleMenu()"></i> <!-- Person icon -->
-                        <i class="bi bi-cart"></i> <!-- Cart icon -->
-                        <span class="cart-total">Rs. 0.00</span> <!-- Cart total price -->
-
-                        <div class="sub-menu-wrap" id="subMenu">
-                            <div class="sub-menu">
-                                <div class="user-info">
-                                    <i class="bi bi-person"></i>
-                                    <h><%= username %></h>
-                                </div>
-                                <hr>
-                                <a href="#" class="sub-menu-link">
-                                    <i class="bi bi-file-person-fill"></i>
-                                    <p>Edit Profile</p>
-                                    <span>></span>
-                                </a>
-                                <form action="Logout" method="POST">
-                                    <button class="sub-menu-link" type="submit">
-                                        <i class="bi bi-box-arrow-right"></i>
-                                        <p>Log out</p>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <jsp:include page="navbar.jsp"/>
+    </header>
 
     <!-- Main -->
     <section class="main py-5">

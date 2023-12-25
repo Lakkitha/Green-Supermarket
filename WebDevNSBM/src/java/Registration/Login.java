@@ -90,7 +90,7 @@ public class Login extends HttpServlet
                         session.setMaxInactiveInterval(10 * 24 * 60 * 60); // seconds
                     }
 
-                    dispatcher = request.getRequestDispatcher("personal.jsp");
+                    dispatcher = request.getRequestDispatcher("home.jsp");
                 }
             }
             else

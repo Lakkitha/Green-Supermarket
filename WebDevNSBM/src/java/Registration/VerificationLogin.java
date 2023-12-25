@@ -69,7 +69,7 @@ public class VerificationLogin extends HttpServlet {
                 Login.StoreTokenInDatabase(id, rememberMeToken);
                 Login.SetRememberMeCookie(response, rememberMeToken);
                 
-                dispatcher = request.getRequestDispatcher("personal.jsp");
+                dispatcher = request.getRequestDispatcher("home.jsp");
             }
             else
             {
