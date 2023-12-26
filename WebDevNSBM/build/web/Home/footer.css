@@ -5,3 +5,24 @@
 .footer p {
     color: rgb(255, 255, 255);
 }
+
+/* Signup and Newsletter Section */
+.signup-newsletter {
+    text-align: center;
+    padding: 50px 0; /* Adjust the padding as needed */
+}
+
+.signup-newsletter h2 {
+    font-size: 24px;
+}
+
+.signup-newsletter form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.signup-newsletter input,
+.signup-newsletter button {
+    width: 100%;
+    margin-top: 10px;
+}

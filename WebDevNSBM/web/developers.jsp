@@ -55,9 +55,9 @@
                     <div class="img-container">
                         <img src="Home/images/Kusal.jpeg">
                     </div>
-                    <h3> Kusal </h3>
-                    <p> Backend implementation and Game Developer </p>
-                    <p> #Backend #GameDev </p>
+                    <h3> Kusal Videshan </h3>
+                    <p> Game Developer </p>
+                    <p> #GameDev </p>
                     <div class="icons">
                         <a href="https://www.youtube.com/@UnderdogDen">
                             <i class="bi bi-youtube"></i>
@@ -83,7 +83,7 @@
                         <img src="Home/images/Gagana.jpg">
                     </div>
                     <h3> Gagana Methmal </h3>
-                    <p> FrontEnd and DevOps Enthusiast </p>
+                    <p> DevOps Enthusiast </p>
                     <p> #DevOps #Fullstack </p>
                     <div class="icons">
                         <a href="mailto:gaganam220@gmail.com">

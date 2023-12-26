@@ -19,6 +19,7 @@
               crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="Home/homeStyle.css">
+        <link rel="stylesheet" href="Home/blog.css">
         <title>Home Page</title>
     </head>
 
@@ -154,6 +155,75 @@
                 </div>
             </div>
         </section>
+
+        <!-- Blog Section -->
+        <section class="from-blog spad">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-6 py-5 m-auto">
+                        <h1>From The Blog </h1>
+                        <div class="line my-4"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="blog__item rounded-0">
+                            <div class="blog__item__pic">
+                                <img src="Home/images/fresh.jpg" alt="" class="rounded-0">
+                            </div> <br>
+                            <div class="blog__item__text">
+                                <ul class="blog__item__info">
+                                    <li><i class="fa-regular fa-calendar"></i> December 25, 2023</li>
+                                    <li><i class="fa-regular fa-comment"></i> 12 comments</li>
+                                </ul> <br>
+                                <h5><a href="#">Fresh Picks of the Week!</a></h5>
+                                <p>Welcome to our weekly roundup of the freshest and most delicious items available at our
+                                    supermarket. This week, we're excited to highlight some incredible picks that you won't want to
+                                    miss. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item rounded-0">
+                        <div class="blog__item__pic">
+                            <img src="Home/images/tips.jpg" alt="" class="rounded-0">
+                        </div> <br>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa-regular fa-calendar"></i> December 12, 2023</li>
+                                <li><i class="fa-regular fa-comment"></i> 6 comments</li>
+                            </ul> <br>
+                            <h5><a href="#">Shopping Tips for a Healthier You</a></h5>
+                            <p>At green supermarket, we believe in empowering our customers to make informed and healthy
+                                choices. Checkout to enhance your next grocery shopping experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item rounded-0">
+                        <div class="blog__item__pic">
+                            <img src="Home/images/global.jpg" alt="" class="rounded-0">
+                        </div> <br>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa-regular fa-calendar"></i> November 30, 2023</li>
+                                <li><i class="fa-regular fa-comment"></i> 8 comments</li>
+                            </ul> <br>
+                            <h5><a href="#">Exploring Global Flavors at Green</a></h5>
+                            <p>Embark on a culinary journey with Green Supermarket as we take you on a tour of global
+                                flavors right in your neighborhood. Our supermarket is a treasure trove of international
+                                delights. </p>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Blog End -->
 
         <!-- Footer -->
         <footer>
