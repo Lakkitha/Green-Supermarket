@@ -14,8 +14,7 @@
     </head>    
     <body>
         <main>
-            <jsp:include page="Fruits.jsp"/>
-            <%-- <jsp:include page="Cart.jsp"/> - To run cart remove the comments --%>
+            <jsp:include page="Cart.jsp"/>
         </main>
     </body>
 </html>
