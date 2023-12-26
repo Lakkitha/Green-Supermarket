@@ -25,7 +25,7 @@
                 <div class="overlay"></div>
                 <div class="banner-text">
                     <h1>About Us </h1>
-                    <p> How we Elevate Eeveryday Shopping with Innovation and Excellence! </p>
+                    <p> How we Elevate Everyday Shopping with Innovation! </p>
                 </div>
             </div>
         </header>

@@ -1,237 +1,264 @@
 /* Banner */
 .banner {
-  position: relative;
-  text-align: left;
-  overflow: hidden;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
 }
 
 .banner-image {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .banner-text {
-  position: absolute;
-  top: 50%;
-  left: 10%; /* Adjust the left distance as needed */
-  transform: translate(0%, -50%);
-  color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Adjust the left distance as needed */
+    transform: translate(0%, -50%);
+    color: #fff;
 }
 
 .banner-text h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .banner-text p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .btn-primary {
-  background-color: var(--main-color);
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.2em;
-  transition: background-color 0.3s;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: var(--main-color);
+    background-color: var(--main-color);
 }
 
 /* Welcome to GS */
 .welcome {
-  background-color: var(--main-color);
-  padding: 60px 0;
-  color: #fff;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s, transform 0.5s;
+    background-color: var(--main-color);
+    padding: 60px 0;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .welcome-loaded {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .welcome h1 {
-  font-size: 3rem;
-  font-weight: bold;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .welcome .line2 {
-  height: 6px;
-  width: 30%;
-  background-color: white;
-  display: inline-block;
+    height: 6px;
+    width: 30%;
+    background-color: white;
+    display: inline-block;
 }
 
 .welcome h2 {
-  font-size: 1.5rem;
-  font-weight: lighter;
-  padding: 10px 0px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding: 10px 0px;
 }
 
 /* Fade-in Effect */
 .fade-in {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .welcome-loaded .fade-in {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .welcome i {
-  font-size: 45px;
-  color: var(--main-color);
-  opacity: 0;
-  transition: opacity 0.5s;
+    font-size: 45px;
+    color: var(--main-color);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .welcome-loaded .fade-in i {
-  opacity: 1;
+    opacity: 1;
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .welcome h1 {
-    font-size: 2.5rem;
-  }
+    .welcome h1 {
+        font-size: 2.5rem;
+    }
 
-  .welcome .line2 {
-    width: 20%;
-  }
+    .welcome .line2 {
+        width: 20%;
+    }
 
-  .welcome h2 {
-    font-size: 1.2rem;
-  }
+    .welcome h2 {
+        font-size: 1.2rem;
+    }
 
-  .welcome i {
-    font-size: 35px;
-  }
+    .welcome i {
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 576px) {
-  .welcome h1 {
-    font-size: 2rem;
-  }
+    .welcome h1 {
+        font-size: 2rem;
+    }
 
-  .welcome .line2 {
-    width: 15%;
-  }
+    .welcome .line2 {
+        width: 15%;
+    }
 
-  .welcome h2 {
-    font-size: 1rem;
-  }
+    .welcome h2 {
+        font-size: 1rem;
+    }
 
-  .welcome i {
-    font-size: 30px;
-  }
+    .welcome i {
+        font-size: 30px;
+    }
 }
 .mbtn1{
-  height: 50px;
-  width: 25%;
-  outline: none;
-  border: 1;
-  color: rgb(7, 7, 7);
-  background: rgb(248, 248, 248);
-  transition: all 0.4s ease;
+    height: 50px;
+    width: 25%;
+    outline: none;
+    border: 1;
+    color: rgb(7, 7, 7);
+    background: rgb(248, 248, 248);
+    transition: all 0.4s ease;
 }
 .mbtn1:hover{
-  background: rgb(13, 172, 13);
+    background: rgb(13, 172, 13);
 }
 /* Product Style */
 .product {
-  background-color: initial;
+    background-color: initial;
 }
 .product .card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 15px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .star {
-  text-align: end;
-  color: orange;
+    text-align: end;
+    color: orange;
 }
 
 .head1 {
-  font-weight: 400;
-  margin: 0;
+    font-weight: 400;
+    margin: 0;
 }
 
 .per1 {
-  color: #777;
+    color: #777;
 }
 
 .btnc {
-  height: 40px;
-  width: 70%;
-  outline: none;
-  border: none;
-  color: white;
-  background: #28a745; /* Your main color */
-  border-radius: 5px;
-  margin: 0 auto;
-  display: block;
-  cursor: pointer;
-  transition: background 0.3s;
+    height: 40px;
+    width: 70%;
+    outline: none;
+    border: none;
+    color: white;
+    background: #28a745; /* Your main color */
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .btnc:hover {
-  background: #218838; /* Darker shade or different color for hover */
+    background: #218838; /* Darker shade or different color for hover */
 }
 
 /* Animation to fade in product cards */
 .product .fade-in {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .product .fade-in.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Animation to rest of page*/
 .navbar {
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .navbar-loaded {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .banner-text {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .banner-loaded .banner-text {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .footer {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .footer-loaded .footer {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#feedback-form-wrapper #floating-icon>button {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+#feedback-form-wrapper .rating-input-wrapper input[type="radio"] {
+    display: none;
+}
+
+#feedback-form-wrapper .rating-input-wrapper input[type="radio"]~span {
+    cursor: pointer;
+}
+
+#feedback-form-wrapper .rating-input-wrapper input[type="radio"]:checked~span {
+    background-color: #4261dc;
+    color: #fff;
+}
+
+#feedback-form-wrapper .rating-labels>label {
+    font-size: 14px;
+    color: #333;
 }
