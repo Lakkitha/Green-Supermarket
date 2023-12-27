@@ -1,12 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+:root{
+    --primary-color: #a14747;
+    --secondary-color: #37c461;
+}
 body {
-    font-family: "Arial", sans-serif;
-    background-color: #f8f9fa;
-    color: #495057;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
 }
 
 .about.container {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+    
+.about-section{
+    background: url(Home/images/shop/jpg)no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+}
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.text{
+    font-size: 20px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+/* Store CSS Style */
+.store h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.store p:nth-child(1){
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 100px;
+}
+.store p:nth-child(2){
+    font-size: 18px;
+    color: grey;
+}
+.store i{
+    font-size: 45px;
+}
+.store .card{
+    border-radius: 0;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.store .card:hover{
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.1);
+}
+.store .card:hover .per1{
+    color: white;
+}
+.line{
+    height: 6px;
+    width: 30%;
+    background: var(--secondary-color);
+    display: inline-block;
 }
 
 img {
@@ -45,4 +118,32 @@ h1 {
 
 p {
     font-size: 1.2em;
+    text-align: justify; /* Add this line to justify the text */
 }
+
+@mediascreen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }   
+}
+
+@mediascreen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }   
+}
+
+@mediascreen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }   
+}
+
+
