@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.shopping-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    outline: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shopping-cart {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.order-summary h2,
+.order-summary p,
+.order-summary select,
+.order-summary input,
+.order-summary button {
+    margin-bottom: 25px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px solid #ddd; /* Add border to the table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 10px;
+    text-align: left;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+.product-description {
+    text-align: left;
+    margin-left: 10px; /* Add margin to create space between image and text */
+}
+
+.quantity, .shopping-price, .subtotal {
+    width: 20%;
+}
+
+.continue-shopping {
+    box-sizing: border-box;
+    margin-left: 90px;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.remove-button:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+@media (max-width: 768px) {
+    .shopping-cart, .order-summary {
+        width: 100%;
+        border-right: none;
+    }
+}

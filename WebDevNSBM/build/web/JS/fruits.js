@@ -31,7 +31,7 @@ function AddAllProducts(productJson)
                 </div>
             </div>
         `;
-
+        
         productContainer.innerHTML += productCardHTML;
     }
 }

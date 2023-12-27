@@ -20,7 +20,7 @@
         <header>
             <jsp:include page="navbar.jsp"/>
             <!-- Banner -->
-            <div class="banner-container">
+            <div class="about banner-container">
                 <img src="Home/images/aboutbanner.jpg" alt="Banner Image" class="banner-image">
                 <div class="overlay"></div>
                 <div class="banner-text">
@@ -30,7 +30,7 @@
             </div>
         </header>
         <main>
-            <div class="container">
+            <div class="about container">
                 <div class="row">
                     <div class="col-md-6">
                         <img src="Home/images/shop.jpg" alt="Supermarket Image" style="margin-bottom: 32px;">

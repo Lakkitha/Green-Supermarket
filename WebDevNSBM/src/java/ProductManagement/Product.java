@@ -29,6 +29,15 @@ public class Product
         this.type = type;
     }
     
+    public Product(int id, String name, float price, int quantity, String type)
+    {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.type = type;
+    }
+    
     public int GetID()
     {
         return id;

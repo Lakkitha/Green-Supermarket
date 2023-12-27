@@ -37,7 +37,7 @@ public class InsertProductDetails extends HttpServlet
         {
             if (p.GetID() == pID)
             {
-                // break if id is found
+                // break after id is found
                 request.setAttribute("product", new Gson().toJson(p));
                 break;
             }

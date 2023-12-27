@@ -31,6 +31,7 @@
               integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
               crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="Home/nav.css">
+        <script type="text/javascript" src="JS/cart.js"></script>
         <title>Home Page</title>
     </head>
 
@@ -54,13 +55,13 @@
                             <a class="nav-link" href="fruits.jsp?page=fruits"> <b> Fruits</b></a>
                             <a class="nav-link" href="vegetables.jsp?page=vegetables"><b> Vegetables </b></a>
                             <a class="nav-link" href="beverages.jsp?page=beverages"><b> Beverages </b></a>
-                            <a class="nav-link" href="productDetails.jsp"> <b>About</b></a>
+                            <a class="nav-link" href="about.jsp"> <b>About</b></a>
                         </div>
                     </div>
                     <!-- Icons and Price on Right Side -->
                     <div class="d-flex align-items-center ms-auto">
                         <!-- Price Display -->
-                        <span class="price me-3"> <b> $ 1500.00 </b> </span>
+                        <span class="price me-3"> <b class="navbar-total-price"></b> </span>
                         <!-- Search Icon Dropdown -->
                         <div class="nav-item dropdown me-3" id="searchDropdown">
                             <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -80,7 +81,7 @@
                             </div>
                         </div>
                         <!-- Cart Icon Dropdown -->
-                        <a class="nav-link me-3" href="#">
+                        <a class="nav-link me-3" href="cart.jsp">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                         
@@ -167,8 +168,9 @@
                     accountDropdownMenu.classList.remove('show');
                 });
             }
-
             
+            const navbarTotalTag = document.querySelector('.navbar-total-price');
+            navbarTotalTag.innerText = '$' + cartTotal();
 
             document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('.navbar').classList.add('navbar-loaded');
