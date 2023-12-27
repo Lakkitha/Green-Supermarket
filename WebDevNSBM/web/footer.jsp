@@ -113,8 +113,8 @@
                             Useful Links
                         </h5>
                         <p>
-                            <a href="#" class="text-white" style="text-decoration: none">
-                                Your account
+                            <a href="contactus.jsp" class="text-white" style="text-decoration: none">
+                                Contact Us
                             </a>
                         </p>
                         <p>
