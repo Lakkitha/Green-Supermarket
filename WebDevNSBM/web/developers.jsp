@@ -112,7 +112,7 @@
                 <div class="column mb-1">
                     <div class="card rounded-0">
                         <div class="img-container">
-                            <img src="nigg.jpg">
+                            <img src="Home/images/chamath.jpg">
                         </div>
                         <h3> Chamath </h3>
                         <p> Buisness Analyst </p>

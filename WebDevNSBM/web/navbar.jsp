@@ -40,8 +40,8 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div class="container">
                     <!-- Logo -->
-                    <a class="navbar-brand" href="#">
-                        <img src="Home/images/joe.png" alt="Supermarket Logo" class="logo" height="20px" width="120px">
+                    <a class="navbar-brand" href="home.jsp">
+                        <img src="Home/images/greensupermarketlogo.png" alt="Supermarket Logo" class="logo" height="20px" width="120px">
                     </a>
                     <!-- Button to toggle navigation on smaller screens -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
