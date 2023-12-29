@@ -22,6 +22,26 @@
         <title>Home Page</title>
     </head>
     <body>
+        <!-- Signup and Newsletter Section -->
+        <section class="signup-newsletter bg-dark text-white py-5"
+                 style="background-image: url('Home/images/newsbanner.jpg'); background-size: cover; background-position: center;">
+            <div class="container text-center">
+                <h2 class="mb-4 font-weight-bold text-warning">Sign Up for Our Newsletter</h2>
+                <form class="form-inline justify-content-center">
+                    <div class="form-group row">
+                        <label class="sr-only" for="inlineFormInputGroup">Email</label>
+                        <div class="input-group mb-2 col-xs-4">
+                            <input type="email" class="form-control rounded-0" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 d-md-block">
+                        <button class="btn btn-success rounded-0 subscribe-button" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
         <!-- Footer -->
         <footer class="bg-dark text-white pt-5 pb-4 img-fluid">
             <div class="container text-left text-md-left">
@@ -94,8 +114,8 @@
                             Useful Links
                         </h5>
                         <p>
-                            <a href="#" class="text-white" style="text-decoration: none">
-                                Your account
+                            <a href="contactus.jsp" class="text-white" style="text-decoration: none">
+                                Contact Us
                             </a>
                         </p>
                         <p>
@@ -134,7 +154,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-7 col-lg-8">
                         <p>
-                            Copyright ©2024 Green Supermarket, All rights reserved,
+                            Copyright ?2024 Green Supermarket, All rights reserved,
                             <a href="#" style="text-decoration: none">
                                 <strong class="text-warning"> Group A83 </strong>
                             </a>

@@ -18,6 +18,7 @@
     <body>
         <header>
             <jsp:include page="navbar.jsp" />
+        </header>
             <!-- Banner -->
             
             <div class="about-section">
