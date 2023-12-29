@@ -17,7 +17,7 @@ body{
     background: #f5f5f5;
 }
 .about-section{
-    background: url(Home/images/shop.jpg) no-repeat left;
+    background: url(Images/shop.jpg) no-repeat left;
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
@@ -69,4 +69,3 @@ body{
         padding: 60px;
     }
 }
-
