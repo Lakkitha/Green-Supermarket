@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 :root{
@@ -68,4 +67,8 @@ body{
     .inner-container{
         padding: 60px;
     }
+}
+.container {
+    /* Your existing styles */
+    width: 100%; /* or specify a fixed width */
 }

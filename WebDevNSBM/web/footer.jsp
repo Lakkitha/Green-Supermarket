@@ -43,7 +43,7 @@
 
 
         <!-- Footer -->
-        <footer class="bg-dark text-white pt-5 pb-4 img-fluid">
+        <footer class="bg-dark text-white pt-5 pb-4 img-fluid container">
             <div class="container text-left text-md-left">
                 <div class="row text-left text-md-left">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">

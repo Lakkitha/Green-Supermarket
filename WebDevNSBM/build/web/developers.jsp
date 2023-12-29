@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <section>
+    <section class="container">
         <div class="row">
             <h1> Meet the Developers! </h1>
         </div>
