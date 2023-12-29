@@ -15,14 +15,12 @@
     String pageType = (String) request.getParameter("page");
     session.setAttribute("page-name", "Fruit");
 
-    if (pageType == "fruit")
-    {
+    if (pageType == "fruit") {
         response.sendRedirect("RequestProducts");
     }
 
     String productsJson = "";
-    if (request.getAttribute("products") != null)
-    {
+    if (request.getAttribute("products") != null) {
         List<Product> products = (List<Product>) request.getAttribute("products");
         productsJson = new Gson().toJson(products);
     }
@@ -47,7 +45,7 @@
         <script src="JS/products.js"></script>
         <title> Fruits </title>
     </head>
-    
+
     <style>
         .banner-text
         {
@@ -59,14 +57,15 @@
         <jsp:include page="navbar.jsp"/>
         <header>
             <!-- Banner -->
-            <div class="banner-container fade-in">
+            <div class="banner-container fade-in" style="height: 300px;">
                 <img src="Home/images/Berries Background.jpg" alt="Banner Image" class="banner-image">
                 <div class="overlay"></div>
                 <div class="banner-text">
                     <h1>Fruits</h1>
-                    <p> Nature's Bounty Unleashed: Fruits That Nourish, Delight, and Inspire! </p>
+                    <p>Nature's Bounty Unleashed: Fruits That Nourish, Delight, and Inspire!</p>
                 </div>
             </div>
+
         </header>
 
         <section class="product">

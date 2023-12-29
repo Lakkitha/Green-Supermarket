@@ -55,6 +55,7 @@
                             <a class="nav-link" href="fruits.jsp?page=fruit"> <b> Fruits</b></a>
                             <a class="nav-link" href="vegetables.jsp?page=vegetable"><b> Vegetables </b></a>
                             <a class="nav-link" href="beverages.jsp?page=beverage"><b> Beverages </b></a>
+                            <a class="nav-link" href="contactus.jsp?page=contactus"><b> Contact </b></a>
                             <a class="nav-link" href="about.jsp"> <b>About</b></a>
                         </div>
                     </div>

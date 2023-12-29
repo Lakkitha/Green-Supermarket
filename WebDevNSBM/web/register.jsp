@@ -52,7 +52,7 @@
         <!-- Right Box -->
         <div class="col-md-5 right-boxregister">
             
-          <div class="row align-items-center">
+          <div class="row align-items-center mt-3">
             <form
               action="Registration"
               method="POST"

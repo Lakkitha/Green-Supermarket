@@ -44,7 +44,7 @@
             <!-- Work rest in here -->
         </main>
 
-        <section class="welcome text-center pb-5">
+            <section class="welcome text-center pb-5" style="color: green;">
             <div class="container py-4">
                 <div class="row">
                     <!-- Wrap the cards in a single row -->

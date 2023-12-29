@@ -4,27 +4,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.banner-container {
-    position: relative;
-    width: 100%;
-    max-height: 200px; /* Set a maximum height for the banner */
-    overflow: hidden;
-}
-
-.banner-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+.logo img {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 h1 {
@@ -46,22 +29,6 @@ p {
 .social-icons {
     flex: 1;
     text-align: center;
-}
-
-/* Change background and text color for the logo */
-.logo img {
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.banner-container {
-    position: relative;
-}
-
-.banner-image {
-    width: 100%;
-    height: auto;
 }
 
 .overlay {

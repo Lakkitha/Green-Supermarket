@@ -52,7 +52,7 @@ body {
 .banner-container {
     position: relative;
     width: 100%;
-    max-height: 200px; /* Set a maximum height for the banner */
+    max-height: 300px; /* Set a new maximum height for the banner */
     overflow: hidden;
 }
 

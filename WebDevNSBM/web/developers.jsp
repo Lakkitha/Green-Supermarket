@@ -35,7 +35,7 @@
                         <img src="Home/images/Lakkitha.jpg">
                     </div>
                     <h3> Lakkitha Niwunhella </h3>
-                    <p> UI/UX Developer and DevOps Enthusias </p>
+                    <p> UI/UX Developer </p>
                     <p> #frontend </p>
                     <div class="icons">
                         <a href="mailto:lakkithayolo@gmail.com">
@@ -63,10 +63,10 @@
                     </div>
                     <h3> Kusal Videshan </h3>
                     <p> Game Developer </p>
-                    <p> #GameDev </p>
+                    <p> #GameDev #Unity </p>
                     <div class="icons">
                         <a href="https://www.youtube.com/@UnderdogDen">
-                            <i class="bi bi-youtube"></i>
+                            <i class="fa-brands fa-youtube"></i>
                         </a>
                         <a
                             href="https://www.linkedin.com/in/kusal-videshan-935899239/?profileId=ACoAADtlyvkBM6FJYIiyhv6uair-K8V_QPbtRMY">
@@ -89,7 +89,7 @@
                         <img src="Home/images/Gagana.jpg">
                     </div>
                     <h3> Gagana Methmal </h3>
-                    <p> DevOps Enthusiast </p>
+                    <p> Fullstack Developer </p>
                     <p> #DevOps #Fullstack </p>
                     <div class="icons">
                         <a href="mailto:gaganam220@gmail.com">
@@ -115,8 +115,8 @@
                             <img src="nigg.jpg">
                         </div>
                         <h3> Chamath Devmina </h3>
-                        <p> Payment Handling </p>
-                        <p> #Java </p>
+                        <p> Software Developer </p>
+                        <p> #Java #.NET </p>
                         <div class="icons">
                             <a href="chamathdewmina25@gmail.com">
                                 <i class="fa-solid fa-envelope"></i>
@@ -141,8 +141,8 @@
                             <img src="Home/images/Wathsala.jpeg">
                         </div>
                         <h3> Wathsala De Silva </h3>
-                        <p> UI developer </p>
-                        <p> #UI </p>
+                        <p> UI/UX Designer </p>
+                        <p> #UI #UX </p>
                         <div class="icons">
                             <a href="wattsamdesilva@gmail.com">
                                 <i class="fa-solid fa-envelope"></i>

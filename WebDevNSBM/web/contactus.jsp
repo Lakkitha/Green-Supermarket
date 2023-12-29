@@ -16,6 +16,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="RegLog/CSS/contactus.css">
+        <link rel="stylesheet" href="RegLog/CSS/productpages.css">
         <title> Contact Page </title>
     </head>
 
@@ -27,7 +28,7 @@
             <div class="banner-container">
                 <img src="Home/images/contactbanner.jpg" alt="Banner Image" class="banner-image">
                 <div class="overlay"></div>
-                <div class="banner-text">
+                <div class="banner-text mt-4">
                     <h1> Contact Us </h1>
                     <p> Where Freshness and Friendliness Unite! </p>
                 </div>
@@ -73,7 +74,7 @@
             <!-- Map  -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1665.417289123989!2d79.86419948751234!3d6.884353343564906
                     !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bcf5c386e07%3A0x4263b558f8641469!2s44%20Elibank%20Roa
-                    d!5e0!3m2!1sen!2slk!4v1643684042681!5m2!1sen!2slk" width="1500" height="450" style="border:0;" allowfullscreen="" 
+                    d!5e0!3m2!1sen!2slk!4v1643684042681!5m2!1sen!2slk" width="1338" height="450" style="border:0;" allowfullscreen="" 
                     loading="lazy"> </iframe>
 
             <section class="contact">

@@ -51,7 +51,6 @@
                                         <div class="rating-input-wrapper d-flex justify-content-between mt-2">
                                             <label><input type="radio" name="rating" required /><span
                                                     class="border px-3 py-2 rounded-0">1</span></label>
-                                            <!-- Repeat for other radio buttons -->
                                             <label><input type="radio" name="rating" required /><span
                                                     class="border  px-3 py-2 rounded-0">2</span></label>
                                             <label><input type="radio" name="rating" required /><span

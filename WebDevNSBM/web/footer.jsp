@@ -56,27 +56,27 @@
                         </p>
                         <ul class="list-unstyled list-inline mb-0">
                             <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white">
+                                <a href="https://www.facebook.com" class="btn-floating btn-sm text-white">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white">
+                                <a href="https://www.instagram.com" class="btn-floating btn-sm text-white">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white">
+                                <a href="https://www.twitter.com" class="btn-floating btn-sm text-white">
                                     <i class="fab fa-x-twitter"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white">
+                                <a href="https://www.amazon.com" class="btn-floating btn-sm text-white">
                                     <i class="fa-brands fa-amazon"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white">
+                                <a href="https://www.youtube.com" class="btn-floating btn-sm text-white">
                                     <i class="fa-brands fa-youtube"></i>
                                 </a>
                             </li>
@@ -93,17 +93,17 @@
                             </a>
                         </p>
                         <p>
-                            <a href="#" class="text-white" style="text-decoration: none">
+                            <a href="beverages.jsp" class="text-white" style="text-decoration: none">
                                 Beverages
                             </a>
                         </p>
                         <p>
-                            <a href="#" class="text-white" style="text-decoration: none">
+                            <a href="fruits.jsp" class="text-white" style="text-decoration: none">
                                 Fruits
                             </a>
                         </p>
                         <p>
-                            <a href="#" class="text-white" style="text-decoration: none">
+                            <a href="vegetables.jsp" class="text-white" style="text-decoration: none">
                                 Vegetables
                             </a>
                         </p>
@@ -114,8 +114,8 @@
                             Useful Links
                         </h5>
                         <p>
-                            <a href="contactus.jsp" class="text-white" style="text-decoration: none">
-                                Contact Us
+                            <a href="login.jsp" class="text-white" style="text-decoration: none">
+                                Your account
                             </a>
                         </p>
                         <p>
@@ -165,31 +165,31 @@
                         <div class="text-center text-md-right">
                             <ul class="list-unstyled list-inline">
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
+                                    <a href="https://www.visa.com" class="btn-floating btn-sm text-white" style="font-size: 23px">
                                         <i class="fab fa-cc-visa"> </i>
                                     </a>
                                 </li>
 
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
+                                    <a href="https://www.mastercard.us/en-us.html" class="btn-floating btn-sm text-white" style="font-size: 23px">
                                         <i class="fab fa-cc-mastercard"> </i>
                                     </a>
                                 </li>
 
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
+                                    <a href="https://www.paypal.com" class="btn-floating btn-sm text-white" style="font-size: 23px">
                                         <i class="fab fa-paypal"> </i>
                                     </a>
                                 </li>
 
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
+                                    <a href="https://bitcoin.org/" class="btn-floating btn-sm text-white" style="font-size: 23px">
                                         <i class="fa-brands fa-bitcoin"></i>
                                     </a>
                                 </li>
 
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px">
+                                    <a href="https://www.apple.com/apple-pay/" class="btn-floating btn-sm text-white" style="font-size: 23px">
                                         <i class="fab fa-cc-apple-pay"> </i>
                                     </a>
                                 </li>

@@ -48,7 +48,7 @@
 
         <!-- Right Box-->
         <div class="col-md-5 right-boxlogin mt-5">
-          <div class="row align-items-center">
+          <div class="row align-items-center mt-4">
             <form
               action="Login"
               method="POST"
@@ -65,7 +65,7 @@
                 <input
                   type="email"
                   class="form-control form-control-lg bg-light fs-6 rounded-0"
-                  placeholder="E-Mail Address"
+                  placeholder="Enter your email"
                   name="useremail"
                   id="email"
                   required
