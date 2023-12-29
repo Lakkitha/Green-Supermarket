@@ -28,18 +28,19 @@
             <div class="container text-center">
                 <h2 class="mb-4 font-weight-bold text-warning">Sign Up for Our Newsletter</h2>
                 <form class="form-inline justify-content-center">
-                    <div class="col-auto">
+                    <div class="form-group row">
                         <label class="sr-only" for="inlineFormInputGroup">Email</label>
-                        <div class="input-group mb-2">
-                            <input type="email" class="form-control rounded-0" id="inlineFormInputGroup" placeholder="Enter your email">
+                        <div class="input-group mb-2 col-xs-4">
+                            <input type="email" class="form-control rounded-0" placeholder="Enter your email">
                         </div>
                     </div>
                     <div class="d-grid gap-2 d-md-block">
-                        <button class="btn btn-success rounded-0" type="submit">Subscribe</button>
+                        <button class="btn btn-success rounded-0 subscribe-button" type="submit">Subscribe</button>
                     </div>
                 </form>
             </div>
         </section>
+
 
         <!-- Footer -->
         <footer class="bg-dark text-white pt-5 pb-4 img-fluid">

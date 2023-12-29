@@ -84,87 +84,76 @@
         <section class="product">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-lg-6 py-5 m-auto">
+                    <div class="col-lg-6 py-3 m-auto"> <!-- Adjusted py-5 to py-3 -->
                         <h1>Our Best Products</h1>
-                        <div class="line my-4"></div>
+                        <div class="line my-2"></div> <!-- Adjusted my-4 to my-2 -->
                         <p>Indulge in a world of premium quality and freshness with our best products. Each item is
                             carefully curated to bring you a delightful and wholesome shopping experience.</p>
                     </div>
                 </div>
 
                 <div class="row text-center">
+                    <!-- Card 1 -->
                     <div class="col-lg-4 fade-in">
-                        <div class="card">
+                        <div class="card shadow-sm">
                             <div class="card-body">
-                                <div class="star">
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                </div>
-                                <img src="Home/images/orange.jpg" alt="orange" class="img-fluid pb-3">
+
+                                <img src="Home/images/orange.jpg" alt="orange" class="img-fluid pb-3"
+                                     style="height: 200px; width: 400px;">
                                 <h4 class="head1">Orange</h4>
-                                <p class="per1">2 x 454g / 16oz</p>
-                                <h4 class="head1">$43.00</h4>
-                                <button class="btnc my-4">ADD TO CART</button>
+                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
+                                <h4 class="head1">$0.75</h4>
+                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 fade-in">
-                        <div class="card">
+                        <div class="card shadow-sm">
                             <div class="card-body">
-                                <div class="star">
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                </div>
-                                <img src="Home/images/orange.jpg" alt="orange" class="img-fluid pb-3">
-                                <h4 class="head1">Orange</h4>
-                                <p class="per1">2 x 454g / 16oz</p>
-                                <h4 class="head1">$43.00</h4>
-                                <button class="btnc my-4">ADD TO CART</button>
+
+                                <img src="Home/images/spinach.jpg" alt="orange" class="img-fluid pb-3"
+                                     style="height: 200px; width: 200px;">
+                                <h4 class="head1">Spinach</h4>
+                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
+                                <h4 class="head1">$2.99</h4>
+                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 fade-in">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+
+                                <img src="Home/images/dragon.jpg" alt="orange" class="img-fluid pb-3"
+                                     style="height: 200px; width: 200px;">
+                                <h4 class="head1">Dragonfruit</h4>
+                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
+                                <h4 class="head1">$6.99</h4>
+                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 fade-in">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                    <span><i class="bi bi-star-fill"></i></span>
-                                </div>
-                                <img src="Home/images/orange.jpg" alt="orange" class="img-fluid pb-3">
-                                <h4 class="head1">Orange</h4>
-                                <p class="per1">2 x 454g / 16oz</p>
-                                <h4 class="head1">$43.00</h4>
-                                <button class="btnc my-4">ADD TO CART</button>
-                            </div>
+                    <div class="row text-center py-5">
+                        <div class="col-lg-6 m-auto">
+                            <button class="mbtn1">Explore More</button>
                         </div>
                     </div>
                 </div>
-
-                <div class="row text-center py-5">
-                    <div class="col-lg-6 m-auto">
-                        <button class="mbtn1">Explore More</button>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- Blog Section -->
         <section class="from-blog spad">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-lg-6 py-5 m-auto">
-                        <h1>From The Blog </h1>
-                        <div class="line my-4"></div>
+                    <div class="col-lg-6 py-3 m-auto"> <!-- Adjusted py-5 to py-3 -->
+                        <h1>From Tshe Blog</h1>
+                        <p>Explore the latest insights, tips, and exciting updates from our world of fresh produce, grocery delights, and culinary inspiration.</p>
+                        <div class="line my-2"></div> <!-- Adjusted my-4 to my-2 -->
                     </div>
                 </div>
+
 
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6">
@@ -185,40 +174,40 @@
                         </div>
                     </div>
 
-                   <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item rounded-0">
-                        <div class="blog__item__pic">
-                            <img src="Home/images/tips.jpg" alt="" class="rounded-0">
-                        </div> <br>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa-regular fa-calendar"></i> December 12, 2023</li>
-                                <li><i class="fa-regular fa-comment"></i> 6 comments</li>
-                            </ul> <br>
-                            <h5><a href="#">Shopping Tips for a Healthier You</a></h5>
-                            <p>At green supermarket, we believe in empowering our customers to make informed and healthy
-                                choices. Checkout to enhance your next grocery shopping experience.</p>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="blog__item rounded-0">
+                            <div class="blog__item__pic">
+                                <img src="Home/images/tips.jpg" alt="" class="rounded-0">
+                            </div> <br>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa-regular fa-calendar"></i> December 12, 2023</li>
+                                    <li><i class="fa-regular fa-comment"></i> 6 comments</li>
+                                </ul> <br>
+                                <h5><a href="#">Shopping Tips for a Healthier You</a></h5>
+                                <p>At green supermarket, we believe in empowering our customers to make informed and healthy
+                                    choices. Checkout to enhance your next grocery shopping experience.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item rounded-0">
-                        <div class="blog__item__pic">
-                            <img src="Home/images/global.jpg" alt="" class="rounded-0">
-                        </div> <br>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa-regular fa-calendar"></i> November 30, 2023</li>
-                                <li><i class="fa-regular fa-comment"></i> 8 comments</li>
-                            </ul> <br>
-                            <h5><a href="#">Exploring Global Flavors at Green</a></h5>
-                            <p>Embark on a culinary journey with Green Supermarket as we take you on a tour of global
-                                flavors right in your neighborhood. Our supermarket is a treasure trove of international
-                                delights. </p>
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="blog__item rounded-0">
+                            <div class="blog__item__pic">
+                                <img src="Home/images/global.jpg" alt="" class="rounded-0">
+                            </div> <br>
+                            <div class="blog__item__text">
+                                <ul>
+                                    <li><i class="fa-regular fa-calendar"></i> November 30, 2023</li>
+                                    <li><i class="fa-regular fa-comment"></i> 8 comments</li>
+                                </ul> <br>
+                                <h5><a href="#">Exploring Global Flavors at Green</a></h5>
+                                <p>Embark on a culinary journey with Green Supermarket as we take you on a tour of global
+                                    flavors right in your neighborhood. Our supermarket is a treasure trove of international
+                                    delights. </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 </div>
             </div>
