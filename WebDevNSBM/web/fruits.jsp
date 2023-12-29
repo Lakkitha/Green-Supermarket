@@ -13,12 +13,13 @@
 <%
     // Request products
     String pageType = (String) request.getParameter("page");
-    
-    if (pageType == "fruits")
+    session.setAttribute("page-name", "Fruit");
+
+    if (pageType == "fruit")
     {
         response.sendRedirect("RequestProducts");
     }
-    
+
     String productsJson = "";
     if (request.getAttribute("products") != null)
     {
@@ -27,12 +28,9 @@
     }
 %>
 
-
-
 <!DOCTYPE HTML>
 <html lang="en-US">
-
-    <head>
+    <head>        
         <meta charset="UTF-8">
         <meta name="author" content="Gagana">
         <meta name="description" content="Fruits | Green Supermarket">
@@ -46,7 +44,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-        <script src="JS/fruits.js"></script>
+        <script src="JS/products.js"></script>
         <title> Fruits </title>
     </head>
     
@@ -100,7 +98,7 @@
         <script>
             console.log('<%=pageType%>');
 
-            if ('<%=pageType%>' === 'fruits')
+            if ('<%=pageType%>' === 'fruit')
             {
                 window.location.assign("RequestProducts");
             }

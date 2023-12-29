@@ -4,6 +4,30 @@
     Author     : Gagana
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="ProductManagement.Product"%>
+<%@page import="ProductManagement.RequestProducts"%>
+
+<%@ page import="com.google.gson.Gson" %>
+
+<%
+    // Request products
+    String pageType = (String) request.getParameter("page");
+    session.setAttribute("page-name", "Beverage");
+    
+    if (pageType == "beverage")
+    {
+        response.sendRedirect("RequestProducts");
+    }
+    
+    String productsJson = "";
+    if (request.getAttribute("products") != null)
+    {
+        List<Product> products = (List<Product>) request.getAttribute("products");
+        productsJson = new Gson().toJson(products);
+    }
+%>
+
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -21,6 +45,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <script src="JS/products.js"></script>
         <title> Beverages </title>
         
         <style>
@@ -59,202 +84,9 @@
                 </div>
 
                 <!-- Row 1 -->
-                <div class="row text-center">
+                <div class="row text-center js-product-container">
                     <!-- Card 1 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star"></i></span>
-                                </div>
-                                <img src="Home/images/coca.jpeg" alt="orange" class="img-fluid pb-3"
-                                     style="height: 200px; width: 400px;">
-                                <h4 class="head1">Coca Cola </h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$0.75</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star"></i></span>
-
-                                </div>
-                                <img src="Home/images/spri.jpeg" alt="orange" class="img-fluid pb-3 rounded"
-                                     style="height: 200px; width: 200px;">
-                                <h4 class="head1">Sprite</h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$1.99</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                </div>
-                                <img src="Home/images/fruit.jpeg" alt="orange" class="img-fluid pb-3"
-                                     style="height: 200px; width: 200px;">
-                                <h4 class="head1">Fruit Juice </h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$2.99</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 2 -->
-                <div class="row text-center">
-                    <!-- Card 4 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star"></i></span>
-                                </div>
-                                <img src="Home/images/coffee.png" alt="orange" class="img-fluid pb-3"
-                                     style="height: 200px; width: 200px;">
-                                <h4 class="head1"> Ice Coffee </h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$3.99</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-
-                                </div>
-                                <img src="Home/images/prime.jpg" alt="orange" class="img-fluid pb-3 rounded"
-                                     style="height: 200px; width: 200px;">
-                                <h4 class="head1">Prime</h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$4.99</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                </div>
-                                <img src="Home/images/ice.jpeg" alt="orange" class="img-fluid pb-3"
-                                     style="height: 200px; width: 200px;">
-                                <h4 class="head1"> Ice Tea </h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$4.50</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="row text-center">
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star"></i></span>
-                                </div>
-                                <img src="Home/images/pep.jpeg" alt="orange" class="img-fluid pb-3"
-                                     style="height: 200px; width: 400px;">
-                                <h4 class="head1">Pepsi</h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$1.75</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 8 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star"></i></span>
-                                </div>
-                                <img src="Home/images/ginger.jpg" alt="orange" class="img-fluid pb-3 rounded"
-                                     style="height: 200px; width: 200px;">
-                                <h4 class="head1">Ginger Beer</h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$0.99</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 9 -->
-                    <div class="col-lg-4 fade-in">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="star">
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star-fill"></i></span>
-                                    <span class="star-item"><i class="bi bi-star"></i></span>
-                                </div>
-                                <img src="Home/images/lemona.jpeg" alt="orange" class="img-fluid pb-3"
-                                     style="height: 200px; width: 200px;">
-                                <h4 class="head1">Lemonade</h4>
-                                <p class="per1"> <small> 2 x 45g / 16oz </small> </p>
-                                <h4 class="head1">$2.49</h4>
-                                <button class="btnc my-4"> <i class="fa-solid fa-cart-shopping"></i> Add to Cart </button>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -267,6 +99,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+    
+    <script>
+        console.log('<%=pageType%>');
+
+        if ('<%=pageType%>' === 'beverage')
+        {
+            window.location.assign("RequestProducts");
+        }
+
+        AddAllProducts(<%=productsJson%>);
+        //console.log(JSON.parse(JSON.stringify(<%=productsJson%>)));
+    </script>
 </body>
 
 </html>

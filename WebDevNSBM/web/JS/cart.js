@@ -70,13 +70,15 @@ function addCartItems()
         currentCartItems = JSON.parse(currentCartItems); // Convert to an object
         var cartContainer = document.querySelector(".cart-items");
         
+        console.log(currentCartItems);
+        
         for (let x in currentCartItems)
         {
             const cartItemHTML = `
                 <tr>
                     <td class="product-details">
                         <input type="hidden" class="js-product-id" name="product-id" value=""/>
-                        <img src="Home/Fruit_Images/${currentCartItems[x].itemName}.jpg" alt="Cranberries" class="product-image">
+                        <img src="Images/${currentCartItems[x].itemType}_Images/${currentCartItems[x].itemName}.jpg" alt="${currentCartItems[x].itemName}" class="product-image">
                         <div class="product-description">
                             <strong>${currentCartItems[x].itemName}</strong><br />
                             <small>${currentCartItems[x].itemType}</small><br />

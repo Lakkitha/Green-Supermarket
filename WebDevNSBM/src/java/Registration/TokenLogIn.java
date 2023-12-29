@@ -67,9 +67,11 @@ public class TokenLogIn extends HttpServlet
                         if (userRs.next())
                         {
                             String username = userRs.getString("ufname");
+                            String address = userRs.getString("uaddress");
                             
                             session.setAttribute("uid", userID);
                             session.setAttribute("uname", username);
+                            session.setAttribute("useraddress", address);
                             
                             dispatcher = request.getRequestDispatcher("home.jsp");
                         }

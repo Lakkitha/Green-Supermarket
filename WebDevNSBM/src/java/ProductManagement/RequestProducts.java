@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -33,12 +34,33 @@ public class RequestProducts extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
     {
-        List<Product> products = FetchProducts();
-
+        HttpSession session = request.getSession();
+        String pageName = (String)session.getAttribute("page-name");
+        
+        System.out.println("Page name: " + pageName);
+        
+        List<Product> products = FetchProductsByType(pageName);
+        
         request.setAttribute("products", products);
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher("fruits.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(pageName.toLowerCase() + "s.jsp");
         dispatcher.forward(request, response);
+    }
+    
+    public static List<Product> FetchProductsByType(String type)
+    {
+        List<Product> products = FetchProducts();
+        List<Product> productsByType = new ArrayList<>();
+        
+        for (Product product : products)
+        {
+            if (product.GetType().equals(type))
+            {
+                productsByType.add(product);
+            }
+        }
+        
+        return productsByType;
     }
     
     public static List<Product> FetchProducts()

@@ -20,11 +20,23 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author OMEN
  */
-@WebServlet(name = "AddToCart", urlPatterns = {"/AddToCart"})
-public class AddToCart extends HttpServlet 
+@WebServlet(name = "OrderCompletion", urlPatterns = {"/OrderCompletion"})
+public class OrderCompletion extends HttpServlet 
 {
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+    {
+        
+    }
+    
+    // Method to add an order
+    private void AddOrder()
+    {
+        
+    }
+    
+    // Method to add order details per purchased item
+    private void AddOrderDetails()
     {
         
     }

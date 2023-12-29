@@ -7,7 +7,7 @@
         <meta name="description" content="Product Details | Green Supermarket" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="Product/CSS/ProductDetails.css" />
-        <script src="JS/fruits.js"></script>
+        <script src="JS/products.js"></script>
         <script src="JS/cart.js"/></script>
         <link
             rel="stylesheet"

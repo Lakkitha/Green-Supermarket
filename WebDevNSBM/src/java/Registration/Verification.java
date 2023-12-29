@@ -31,13 +31,13 @@ public class Verification
     public static void SendVerificationEmail(String toEmail, String verificationLink) 
     {
         final String username = "kusalvbusiness@gmail.com";
-        final String password = "AGktUTP1yKjZ2dam";
+        final String password = "fwxg lhxb sscv soas";
         final String fromEmail = "kusalvbusiness@gmail.com";
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp-relay.brevo.com");
+        props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
 
         Session session = Session.getInstance(props,

@@ -4,6 +4,8 @@
     Author     : Gagana
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -69,29 +71,40 @@
                 <!-- Column 2 - Order Summary -->
                 <div class="order-summary">
                     <h2>Order Summary</h2>
+                    
                     <!-- Content -->
                     <p><b class="js-noOfItems"></b></p>
+                    <p><b class="js-address"></b><c:out value="${address}" /></p>
                     <p><b>SHIPPING</b></p>
+                    
                     <!-- Dropdown -->
                     <select>
                         <option value="standard">Standard Shipping (3 - 5 Days)</option>
                         <option value="express">Express Shipping (1-2 Days)</option>
                     </select>
-                    <!-- Promo Code -->
-                    <p><b>PROMO CODE</b></p>
-                    <input class="form-control rounded-0" type="text" placeholder="Enter promo code"
-                           aria-label="default input example" />
-                    <button type="button" class="btn btn-danger rounded-0">Apply</button>
-                    <hr />
-                    <p>Total Cost: <b class="js-total-cost"></b></p>
-                    <button type="button" class="btn btn-success rounded-0">Checkout</button>
+                    
+                    <p>Total Cost: <b class="js-total-cost">$</b></p>
+                    <c:choose>
+                        <c:when test="${empty userid}">
+                            <button type="button" class="btn btn-success rounded-0" 
+                                    onclick="window.location.href='login.jsp';">
+                                Login to Checkout
+                            </button>
+                        </c:when>
+                        <c:otherwise>
+                            <div id="paypal-button"></div>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
             </div>
+            
 
+            <!--
             <div class="continue-shopping">
                 <br />
                 <a href="home.jsp"><<< Continue Shopping</a>
             </div>
+            -->
         </main>
 
     <footer>
@@ -110,7 +123,7 @@
         itemTag.innerText = noOfCartItems() + " items";
         
         var totalTag = document.querySelector('.js-total-cost');
-        totalTag.innerText = '$' + cartTotal();
+        totalTag.innerText += cartTotal();
         
         // Add event listener for each remove button
         let currentCartItems = localStorage.getItem("cart");
@@ -134,6 +147,9 @@
             
         }
     </script>
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=Acuw8QnOeBseazDciSd34fj-2z7Jp1MQKU7fX3YzBftQfYqGvTo74rt5AQ6M2Pb7OIXvAPD1B2xd2Q2Y"></script>
+    <script src="JS/payment.js"></script>
     
     </body>
 </html>

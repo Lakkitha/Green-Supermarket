@@ -18,7 +18,7 @@ function AddAllProducts(productJson)
             <div class="col-lg-4 fade-in">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <img src="Home/Fruit_Images/${products[x].name}.jpg" alt="${products[x].name}" class="img-fluid pb-3"
+                        <img src="Images/${products[x].type}_Images/${products[x].name}.jpg" alt="${products[x].name}" class="img-fluid pb-3"
                              style="height: 200px; width: 200px;">
                         <h4 class="head1">${products[x].name}</h4>
                         <p class="per1"> <small>${products[x].quantity} in stock</small> </p>
@@ -44,7 +44,7 @@ function AddProduct(productJson)
     
     const productImageHTML = `
             <img
-                src="Home/Fruit_Images/${product.name}.jpg"
+                src="Images/${product.type}_Images/${product.name}.jpg"
                 alt="Product Image"
                 class="product-image img-fluid"
                 height ="300px"
