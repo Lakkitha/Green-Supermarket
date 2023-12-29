@@ -89,7 +89,7 @@
                         <img src="Home/images/Gagana.jpg">
                     </div>
                     <h3> Gagana Methmal </h3>
-                    <p> DevOps Enthusiast </p>
+                    <p> Fullstack Developer </p>
                     <p> #DevOps #Fullstack </p>
                     <div class="icons">
                         <a href="mailto:gaganam220@gmail.com">

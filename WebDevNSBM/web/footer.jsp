@@ -43,11 +43,11 @@
 
 
         <!-- Footer -->
-        <footer class="bg-dark text-white pt-5 pb-4 img-fluid container">
+        <footer class="bg-dark text-white pt-5 pb-4 img-fluid">
             <div class="container text-left text-md-left">
                 <div class="row text-left text-md-left">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <img src="Home/images/joe.png" height="30px" width="150px"> <br> <br>
+                        <img src="Home/images/greensupermarketlogo.png" height="40px" width="230px"> <br> <br>
                         <p>
                             Discover freshness at Green Supermarket? your eco-friendly haven
                             for quality groceries. Locally sourced produce, organic options,

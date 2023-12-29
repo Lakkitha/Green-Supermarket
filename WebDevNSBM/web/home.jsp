@@ -84,7 +84,7 @@
         <section class="product">
             <div class="container">
                 <div class="row text-center">
-                    <div class="col-lg-6 py-3 m-auto"> <!-- Adjusted py-5 to py-3 -->
+                    <div class="col-lg-6 py-3 m-auto mt-5"> <!-- Adjusted py-5 to py-3 -->
                         <h1>Our Best Products</h1>
                         <div class="line my-2"></div> <!-- Adjusted my-4 to my-2 -->
                         <p>Indulge in a world of premium quality and freshness with our best products. Each item is

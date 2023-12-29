@@ -41,7 +41,7 @@
                 <div class="container">
                     <!-- Logo -->
                     <a class="navbar-brand" href="home.jsp">
-                        <img src="Home/images/greensupermarketlogo.png" alt="Supermarket Logo" class="logo" height="20px" width="120px">
+                        <img src="Home/images/greensupermarketlogo.png" alt="Supermarket Logo" class="logo" height="40px" width="200px">
                     </a>
                     <!-- Button to toggle navigation on smaller screens -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
