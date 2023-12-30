@@ -9,14 +9,13 @@
     --textcolor:#fff;
 }
 body{
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #f5f5f5;
 }
 .about-section{
-    background: url(Images/shop.jpg) no-repeat left;
+    background: url(../../Home/images/shop.jpg) no-repeat left;
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;

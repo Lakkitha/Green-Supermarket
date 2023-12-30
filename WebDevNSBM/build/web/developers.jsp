@@ -62,8 +62,8 @@
                         <img src="Home/images/Kusal.jpeg">
                     </div>
                     <h3> Kusal </h3>
-                    <p> Game Developer </p>
-                    <p> #GameDev </p>
+                    <p> Lead Developer </p>
+                    <p> #GameDev #.NET #fullstack</p>
                     <div class="icons">
                         <a href="https://www.youtube.com/@UnderdogDen">
                             <i class="bi bi-youtube"></i>
@@ -115,8 +115,8 @@
                             <img src="Home/images/chamath.jpg">
                         </div>
                         <h3> Chamath </h3>
-                        <p> Buisness Analyst </p>
-                        <p> #Buisness </p>
+                        <p> Business Analyst </p>
+                        <p> #Business </p>
                         <div class="icons">
                             <a href="chamathdewmina25@gmail.com">
                                 <i class="fa-solid fa-envelope"></i>
@@ -141,8 +141,8 @@
                             <img src="Home/images/Wathsala.jpeg">
                         </div>
                         <h3> Wathsala </h3>
-                        <p> Buisness Analyst </p>
-                        <p> #Buisness </p>
+                        <p> Business Analyst </p>
+                        <p> #Business </p>
                         <div class="icons">
                             <a href="wattsamdesilva@gmail.com">
                                 <i class="fa-solid fa-envelope"></i>

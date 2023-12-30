@@ -13,42 +13,30 @@ body {
 .box-area {
     width: 880px; /* Adjust the width as needed */
     padding-right: 25px; /* Add right padding to reduce the container width */
-    max-height: 600px;
-    margin:auto;
-    position:absolute;
-    
 }
 
 /* Added this style to center content in the right box */
-.right-boxlogin {
+.right-box {
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
     text-align: center;
-    padding: 20px 15px;
-    position: relative;
-    
-    
+    padding: 40px 15px; /* Adjust padding for smaller screens */
 }
-.right-boxregister {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 500px;
-    text-align: center;
-    padding: 20px 15px;
-    position: relative;
-    
-    
-    
+
+.left-box
+{
+    margin-right: 30px;
 }
+
 /* Add this style to align the "Don't have an account yet?" text to the left */
 .row.not-centered {
     justify-content: flex-start;
 }
 
 /* Login */
-.right-boxlogin .header-text,
-.right-boxlogin .input-group {
+.right-box .header-text,
+.right-box .input-group {
     margin-bottom: 20px;
 }
 
@@ -62,12 +50,7 @@ img {
     height: auto;
 }
 
-.header-textregister {
-    text-align: left;
-}
-
-.header-text
-{
+.header-text {
     text-align: left;
 }
 
@@ -120,29 +103,3 @@ img {
     }
 }
 */
-
-/* register*/
-/*.right-box .header-textregister,
-.right-box .input-group {
-    margin-bottom: 20px;}*/
-
-#registerForm
-{
-  position: absolute;
-  margin-top: 500px;
-  
-  
-}
-
-
-.box-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right-boxlogin {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
